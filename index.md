@@ -4,7 +4,6 @@ title: Zhao62的博客
 ---
 
 <style>
-/* 这段代码会把顶部的大标题栏隐藏掉 */
 header.intro-header {
     display: none;
 }
