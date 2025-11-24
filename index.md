@@ -10,7 +10,7 @@ header.intro-header { display: none !important; }
 div.container[role="main"] { margin-top: 30px !important; }
 </style>
 
-### 📚 最新文章
+### 📚 Recent Posts
 
 <ul class="post-list" style="list-style-type: none; padding-left: 0;">
   {% for post in site.posts %}
