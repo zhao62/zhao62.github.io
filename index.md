@@ -1,6 +1,7 @@
 ---
-layout: home
-title: 首页
+layout: page
+title: ""
+subtitle: ""
 ---
 
 <style>
@@ -8,14 +9,14 @@ header.intro-header {
     display: none !important;
 }
 
+.page-heading {
+    display: none !important;
+}
+
 div.container[role="main"] {
-    margin-top: 100px !important;
+    margin-top: 30px !important;
 }
 </style>
-
-# 欢迎来到我的科研空间
-
-这里是我记录 **深度学习**、**人工智能** 论文阅读笔记的地方。
 
 ### 📚 最新文章
 
