@@ -20,4 +20,4 @@ div.container[role="main"] {
 
 ### 📚 最新文章
 
-* [深度残差收缩网络 (Deep Residual Shrinkage Networks)](/posts/deep-residual-networks)
+* [深度残差收缩网络 (Deep Residual Shrinkage Networks)](/_posts/DRSN/2025-11-24-DRSN-zh)
