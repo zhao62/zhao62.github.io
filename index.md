@@ -23,3 +23,5 @@ div.container[role="main"] { margin-top: 30px !important; }
     </li>
   {% endfor %}
 </ul>
+
+![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=zhao62.zhao62.github.io)
