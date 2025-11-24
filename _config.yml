@@ -1,6 +1,6 @@
 title: Zhao62的博客
 description: 欢迎来到我的技术博客
-remote_theme: pages-themes/cayman
+remote_theme: pages-themes/Minimal
 plugins:
-  - jekyll-remote-theme # 刚才漏了这行，必须加上！
+  - jekyll-remote-theme
   - jekyll-seo-tag
