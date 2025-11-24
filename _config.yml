@@ -1,3 +1,5 @@
-theme: jekyll-theme-cayman
 title: Zhao62的博客
 description: 欢迎来到我的技术博客
+remote_theme: pages-themes/cayman
+plugins:
+  - jekyll-seo-tag
