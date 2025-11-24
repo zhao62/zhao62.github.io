@@ -1,18 +1,17 @@
+# 网站基础设置
 title: Zhao62的博客
 description: 专注 AI 与深度学习的研究笔记
 author: Zhao62
-email: your-email@example.com # 选填
 
-# 关键是这行，切换到第三方现代主题
-remote_theme: jeffreytse/jekyll-theme-yat
+# 启用 Beautiful Jekyll 主题
+remote_theme: daattali/beautiful-jekyll
 
-# 插件配置
+# 必须的插件
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
 
-# 主题特定设置 (让它更好看)
-yat:
-  render_drafts: false
-  author:
-    name: Zhao62
+# 主题美化设置
+beautiful-jekyll:
+  title-page: true # 允许单独的标题页
+  visual-page: true
