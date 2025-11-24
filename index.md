@@ -1,8 +1,16 @@
 ---
 layout: home
-title: 首页
-subtitle: 欢迎来到我的科研空间
+title: Zhao62的博客
 ---
+
+<style>
+/* 这段代码会把顶部的大标题栏隐藏掉 */
+header.intro-header {
+    display: none;
+}
+</style>
+
+# 欢迎来到我的科研空间
 
 这里是我记录 **深度学习**、**人工智能** 论文阅读笔记的地方。
 
