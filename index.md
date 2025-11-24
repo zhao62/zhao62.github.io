@@ -1,11 +1,15 @@
 ---
 layout: home
-title: Zhao62的博客
+title: 首页
 ---
 
 <style>
 header.intro-header {
-    display: none;
+    display: none !important;
+}
+
+div.container[role="main"] {
+    margin-top: 100px !important;
 }
 </style>
 
