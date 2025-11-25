@@ -15,3 +15,16 @@ plugins:
 beautiful-jekyll:
   title-page: true # 允许单独的标题页
   visual-page: true
+
+# --- 新增/修改的核心部分 ---
+
+# 1. 全局开启 MathJax 支持
+mathjax: true
+
+# 2. 配置 Markdown 解析引擎 (Kramdown)
+# 这是为了防止 Markdown 编译器在 MathJax 运行前把数学符号转义搞乱
+markdown: kramdown
+kramdown:
+  input: GFM              # GitHub Flavored Markdown
+  math_engine: mathjax    # 告诉 Jekyll 使用 MathJax 引擎
+  syntax_highlighter: rouge
