@@ -94,7 +94,7 @@ U prepoznavanju govora, specifično u relativno bučnim okruženjima kao što su
 
 ## Reference
 
-Minghang Zhao, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht, Deep residual shrinkage networks for fault diagnosis, IEEE Transactions on Industrial Informatics, 2020, 16(7): 4681-4690.
+Minghang Zhao, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht, Deep residual shrinkage networks for fault diagnosis, *IEEE Transactions on Industrial Informatics*, 2020, 16(7): 4681-4690.
 
 [https://ieeexplore.ieee.org/document/8850096](https://ieeexplore.ieee.org/document/8850096)
 
