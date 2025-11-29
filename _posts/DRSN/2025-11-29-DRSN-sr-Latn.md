@@ -1,28 +1,28 @@
 ---
 layout: post
-title: "Deep Residual Shrinkage Network: Метод с изкуствен интелект за силно зашумени данни"
+title: "Deep Residual Shrinkage Networks: Metoda veštačke inteligencije za podatke sa jakim šumom"
 date: 2025-11-29
 tags: [Deep Learning, AI]
 mathjax: true
 ---
 
-**Deep Residual Shrinkage Network (DRSN) е подобрен вариант на дълбоките остатъчни мрежи (Deep Residual Networks). По същество, тя представлява интеграция на дълбоки остатъчни мрежи, механизми за внимание (attention mechanisms) и функции за меко прагуване (soft thresholding).**
+**Deep Residual Shrinkage Networks (DRSN) je unapređena varijanta dubokih rezidualnih mreža (ResNet). U suštini, to je integracija ResNet-a, mehanizama pažnje (attention mechanisms) i funkcija mekog pragovanja (soft thresholding).**
 
-**В известна степен, принципът на действие на Deep Residual Shrinkage Network може да се разбере по следния начин: чрез механизмите за внимание се забелязват и идентифицират незначителните характеристики (features), които след това се нулират чрез функциите за меко прагуване; или казано по друг начин – механизмите за внимание откриват важните характеристики и ги запазват. Този процес усилва способността на дълбоката невронна мрежа да извлича полезна информация от сигнали, съдържащи шум.**
+**U određenoj meri, princip rada DRSN-a se može razumeti na sledeći način: pomoću mehanizma pažnje primećuje nevažna obeležja (features) i postavlja ih na nulu koristeći funkciju mekog pragovanja; ili, drugim rečima, primećuje važna obeležja i zadržava ih. Ovaj proces pojačava sposobnost duboke neuronske mreže da izvuče korisna obeležja iz signala koji sadrže šum.**
 
-## 1. Мотивация на изследването
+## 1. Motivacija za istraživanje
 
-**Първо, при класификацията на образци (samples), наличието на шум – като гаусов шум, розов шум, лапласов шум и др. – е неизбежно.** В по-широк смисъл, образците често съдържат информация, която не е свързана с текущата задача за класификация, което също може да се тълкува като „шум“. Този шум може да окаже негативно влияние върху ефективността на класификацията. (Мекото прагуване е ключова стъпка в много алгоритми за потискане на шума от сигнали).
+**Prvo, prilikom klasifikacije uzoraka, prisustvo šuma – kao što su Gausov šum, ružičasti šum i Laplasov šum – je neizbežno.** Šire gledano, uzorci često sadrže informacije koje nisu relevantne za trenutni zadatak klasifikacije, što se takođe može tumačiti kao šum. Ovaj šum može negativno uticati na performanse klasifikacije. (Meko pragovanje je ključni korak u mnogim algoritmima za uklanjanje šuma).
 
-Например, при разговор на улицата, човешкият глас може да се смеси със звуци от автомобилни клаксони, въртене на гуми и други. Когато се извършва разпознаване на реч върху такива сигнали, резултатът неизбежно ще бъде повлиян от тези фонови звуци. От гледна точка на дълбокото обучение (deep learning), характеристиките, съответстващи на клаксоните и колелата, трябва да бъдат премахнати вътре в самата дълбока невронна мрежа, за да се предотврати влиянието им върху разпознаването на речта.
+Na primer, tokom razgovora pored puta, zvuk govora može biti pomešan sa zvukom automobilskih sirena i točkova. Kada se na ovim signalima vrši prepoznavanje govora, rezultati će neizbežno biti pod uticajem ovih pozadinskih zvukova. Iz perspektive dubokog učenja (Deep Learning), obeležja koja odgovaraju sirenama i točkovima treba da budu eliminisana unutar duboke neuronske mreže kako bi se sprečio njihov uticaj na rezultate prepoznavanja govora.
 
-**Второ, дори в рамките на един и същ набор от данни (dataset), количеството шум често варира при отделните образци.** (Това има допирни точки с механизмите за внимание; ако вземем за пример набор от изображения, позицията на целевия обект може да е различна в различните снимки, а механизмът за внимание може да се фокусира конкретно върху мястото на обекта във всяка отделна снимка).
+**Drugo, čak i u okviru istog skupa podataka, količina šuma često varira od uzorka do uzorka.** (Ovo ima sličnosti sa mehanizmima pažnje; uzimajući skup slika kao primer, lokacija ciljnog objekta može se razlikovati od slike do slike, a mehanizmi pažnje mogu da se fokusiraju na specifičnu lokaciju ciljnog objekta na svakoj slici).
 
-Например, когато обучаваме класификатор за кучета и котки, нека разгледаме 5 изображения с етикет „куче“. Първото изображение може да съдържа куче и мишка, второто – куче и гъска, третото – куче и кокошка, четвъртото – куче и магаре, а петото – куче и патица. При обучението на класификатора, ние неизбежно ще бъдем подложени на смущения от ирелевантни обекти като мишки, гъски, кокошки, магарета и патици, което води до спад в точността на класификацията. Ако успеем да „забележим“ тези ирелевантни обекти и да премахнем съответстващите им характеристики, е възможно да повишим точността на класификатора за кучета и котки.
+Na primer, kada treniramo klasifikator za pse i mačke, zamislimo 5 slika označenih kao „pas“. Prva slika može sadržati psa i miša, druga psa i gusku, treća psa i kokošku, četvrta psa i magarca, a peta psa i patku. Tokom treninga, klasifikator će neizbežno trpeti ometanja od strane irelevantnih objekata kao što su miševi, guske, kokoške, magarci i patke, što dovodi do pada tačnosti klasifikacije. Ako bismo mogli da primetimo ove irelevantne objekte – miševe, guske, kokoške, magarce i patke – i eliminišemo njihova odgovarajuća obeležja, moguće je povećati tačnost klasifikatora za pse i mačke.
 
-## 2. Меко прагуване (Soft Thresholding)
+## 2. Meko pragovanje (Soft Thresholding)
 
-**Мекото прагуване е основна стъпка в много алгоритми за потискане на шума в сигналите. То премахва характеристики, чиято абсолютна стойност е по-малка от определен праг, и „свива“ (shrinks) към нулата тези характеристики, чиято абсолютна стойност е по-голяма от този праг.** Това може да се реализира чрез следната формула:
+**Meko pragovanje je ključni korak u mnogim algoritmima za uklanjanje šuma (denoising). Ono eliminiše obeležja čija je apsolutna vrednost manja od određenog praga, a obeležja čija je apsolutna vrednost veća od tog praga „skuplja“ (shrinks) ka nuli.** Ovo se može implementirati pomoću sledeće formule:
 
 $$
 y = \begin{cases} 
@@ -32,7 +32,7 @@ x + \tau & x < -\tau
 \end{cases}
 $$
 
-Производната на изхода на мекото прагуване спрямо входа е:
+Izvod izlaza mekog pragovanja u odnosu na ulaz je:
 
 $$
 \frac{\partial y}{\partial x} = \begin{cases} 
@@ -42,57 +42,57 @@ $$
 \end{cases}
 $$
 
-Както се вижда по-горе, производната на мекото прагуване е или 1, или 0. Това свойство е идентично с това на активационната функция ReLU. Следователно, мекото прагуване също може да намали риска от изчезване (gradient vanishing) или експлодиране (gradient exploding) на градиента, с който често се сблъскват алгоритмите за дълбоко обучение.
+Kao što se vidi iznad, izvod mekog pragovanja je ili 1 ili 0. Ovo svojstvo je identično kao kod ReLU aktivacione funkcije. Zbog toga, meko pragovanje takođe može smanjiti rizik da algoritmi dubokog učenja naiđu na problem nestajanja ili eksplozije gradijenta (gradient vanishing and exploding).
 
-**Във функцията за меко прагуване, задаването на прага трябва да отговаря на две условия: първо, прагът трябва да е положително число; второ, прагът не може да бъде по-голям от максималната стойност на входния сигнал, в противен случай изходът ще бъде изцяло нула.**
+**U funkciji mekog pragovanja, podešavanje praga mora da zadovolji dva uslova: prvo, prag mora biti pozitivan broj; drugo, prag ne sme biti veći od maksimalne vrednosti ulaznog signala, inače će izlaz biti u potpunosti nula.**
 
-**Също така е желателно прагът да отговаря и на трето условие: всеки образец трябва да има свой собствен, независим праг, съобразен със съдържанието на шум в него.**
+**Istovremeno, najbolje je da prag zadovoljava i treći uslov: svaki uzorak treba da ima svoj nezavisni prag zasnovan na sopstvenoj količini šuma.**
 
-Това се налага, защото съдържанието на шум често е различно при различните образци. Например, често се случва в един и същ набор от данни, образец А да съдържа по-малко шум, докато образец Б да съдържа повече шум. В такъв случай, ако прилагаме меко прагуване в алгоритъм за потискане на шума, образец А трябва да използва по-малък праг, докато образец Б трябва да използва по-голям праг. В дълбоките невронни мрежи, въпреки че тези характеристики и прагове губят своя ясен физически смисъл, основната логика остава същата. Тоест, всеки образец трябва да има свой собствен независим праг, базиран на собственото му ниво на шум.
+To je zato što sadržaj šuma često varira među uzorcima. Na primer, uobičajeno je da unutar istog skupa podataka uzorak A sadrži manje šuma, dok uzorak B sadrži više šuma. U tom slučaju, kada se vrši meko pragovanje u algoritmu za uklanjanje šuma, uzorak A bi trebalo da koristi manji prag, dok bi uzorak B trebalo da koristi veći prag. Iako ova obeležja i pragovi gube svoje eksplicitne fizičke definicije u dubokim neuronskim mrežama, osnovna logika ostaje ista. Drugim rečima, svaki uzorak treba da ima sopstveni nezavisni prag određen njegovim specifičnim sadržajem šuma.
 
-## 3. Механизъм за внимание (Attention Mechanism)
+## 3. Mehanizam pažnje (Attention Mechanism)
 
-Механизмите за внимание са сравнително лесни за разбиране в областта на компютърното зрение (Computer Vision). Зрителната система на животните може бързо да сканира цялата област, да открие целевия обект и след това да фокусира вниманието си върху него, за да извлече повече детайли, като същевременно потиска несвързаната информация. За повече подробности, моля, направете справка с литературата относно механизмите за внимание.
+Mehanizme pažnje je relativno lako razumeti u oblasti kompjuterskog vida (Computer Vision). Vizuelni sistemi životinja mogu razlikovati mete brzim skeniranjem čitavog područja, nakon čega fokusiraju pažnju na ciljni objekat kako bi izvukli više detalja, istovremeno potiskujući irelevantne informacije. Za detalje, molimo pogledajte literaturu o mehanizmima pažnje.
 
-Squeeze-and-Excitation Network (SENet) е сравнително нов метод за дълбоко обучение, използващ механизми за внимание. При различните образци, приносът на различните канали от характеристики (feature channels) към задачата за класификация често е различен. SENet използва малка подмрежа, за да получи набор от тегла, и след това умножава тези тегла по характеристиките на съответните канали, за да коригира големината на характеристиките във всеки канал. Този процес може да се разглежда като прилагане на различно ниво на внимание към различните канали от характеристики.
+Squeeze-and-Excitation Network (SENet) predstavlja relativno nov metod dubokog učenja koji koristi mehanizme pažnje. Kod različitih uzoraka, doprinos različitih kanala obeležja (feature channels) zadatku klasifikacije često varira. SENet koristi malu pod-mrežu da dobije skup težina (weights), a zatim množi te težine sa obeležjima odgovarajućih kanala kako bi prilagodio veličinu obeležja u svakom kanalu. Ovaj proces se može posmatrati kao primena različitih nivoa pažnje na različite kanale obeležja.
 
 <p align="center">
   <img src="/assets/img/DRSN/2025-11-29-DRSN-sr-Latn/SENET_sr_Latn_1.png" alt="Squeeze-and-Excitation Network" width="90%">
 </p>
 
-При този подход всеки образец притежава свой собствен независим набор от тегла. С други думи, теглата за всеки два произволни образеца са различни. В SENet конкретният път за получаване на теглата е: „Глобален пулнинг (Global Pooling) → Напълно свързан слой (Fully Connected Layer) → Функция ReLU → Напълно свързан слой → Функция Sigmoid“.
+U ovom pristupu, svaki uzorak poseduje sopstveni nezavisni skup težina. Drugim rečima, težine za bilo koja dva proizvoljna uzorka su različite. U SENet-u, specifična putanja za dobijanje težina je „Globalno usrednjavanje (Global Pooling) → Potpuno povezani sloj (Fully Connected Layer) → ReLU funkcija → Potpuno povezani sloj → Sigmoid funkcija“.
 
 <p align="center">
   <img src="/assets/img/DRSN/2025-11-29-DRSN-sr-Latn/SENET_sr_Latn_2.png" alt="Squeeze-and-Excitation Network" width="60%">
 </p>
 
-## 4. Меко прагуване с дълбок механизъм за внимание
+## 4. Meko pragovanje sa dubokim mehanizmom pažnje
 
-Deep Residual Shrinkage Network заема гореспоменатата структура на подмрежата от SENet, за да реализира меко прагуване, управлявано от дълбок механизъм за внимание. Чрез подмрежата (обозначена в червеното поле на диаграмите на алгоритъма), може да се научи набор от прагове, чрез които да се извърши меко прагуване на всеки канал от характеристиките.
+Deep Residual Shrinkage Network crpi inspiraciju iz gorepomenute strukture SENet pod-mreže kako bi implementirao meko pragovanje pod dubokim mehanizmom pažnje. Kroz pod-mrežu (prikazanu unutar crvenog okvira), može se naučiti skup pragova kako bi se primenilo meko pragovanje na svaki kanal obeležja.
 
 <p align="center">
   <img src="/assets/img/DRSN/2025-11-29-DRSN-sr-Latn/DRSN_sr_Latn_1.png" alt="Deep Residual Shrinkage Network" width="75%">
 </p>
 
-В тази подмрежа първо се изчисляват абсолютните стойности на всички характеристики във входната карта на характеристиките (feature map). След това, чрез глобален пулнинг на средна стойност (global average pooling) и усредняване, се получава една характеристика, която обозначаваме с A. В другия път, картата на характеристиките след глобалния пулнинг се подава към малка напълно свързана мрежа (fully connected network). Послелният слой на тази мрежа използва функцията Sigmoid, за да нормализира изхода в диапазона между 0 и 1, получавайки коефициент, който обозначаваме с α. Крайният праг може да се изрази като α × A. Следователно, прагът представлява число между 0 и 1, умножено по средната стойност на абсолютните стойности на картата на характеристиките. **Този метод гарантира, че прагът е не само положителeн, но и че няма да бъде прекалено голям.**
+U ovoj pod-mreži, prvo se izračunavaju apsolutne vrednosti svih obeležja na ulaznoj mapi obeležja (feature map). Zatim se, kroz globalno prosečno sažimanje (Global Average Pooling - GAP) i usrednjavanje, dobija jedno obeležje, označeno kao A. U drugoj putanji, mapa obeležja nakon globalnog usrednjavanja se uvodi u malu potpuno povezanu mrežu. Ova potpuno povezana mreža koristi Sigmoid funkciju kao svoj poslednji sloj za normalizaciju izlaza između 0 i 1, dajući koeficijent označen kao α. Konačni prag se može izraziti kao α × A. Dakle, prag je proizvod broja između 0 i 1 i proseka apsolutnih vrednosti mape obeležja. **Ovaj metod osigurava da prag nije samo pozitivan, već i da nije prevelik.**
 
-**Освен това, различните образци получават различни прагове. Следователно, в известна степен това може да се разбира като специален вид механизъм за внимание: забелязват се характеристики, които не са свързани с текущата задача, те се трансформират чрез два конволюционни слоя (convolutional layers) в стойности, близки до 0, и чрез меко прагуване се нулират; или казано иначе – забелязват се характеристиките, свързани с текущата задача, те се трансформират чрез два конволюционни слоя в стойности, далеч от 0, и се запазват.**
+**Štaviše, različiti uzorci rezultiraju različitim pragovima. Posledično, u određenoj meri, ovo se može tumačiti kao specijalizovani mehanizam pažnje: on primećuje obeležja irelevantna za trenutni zadatak, transformiše ih u vrednosti bliske nuli putem dva konvoluciona sloja i postavlja ih na nulu koristeći meko pragovanje; ili alternativno, primećuje obeležja relevantna za trenutni zadatak, transformiše ih u vrednostialeko od nule putem dva konvoluciona sloja i zadržava ih.**
 
-Накрая, чрез натрупване (stacking) на определен брой основни модули, както и конволюционни слоеве, Batch Normalization, активационни функции, глобален пулнинг на средна стойност и напълно свързан изходен слой, се получава пълната Deep Residual Shrinkage Network.
+Konačno, slaganjem određenog broja osnovnih modula zajedno sa konvolucionim slojevima, Batch normalizacijom (BN), aktivacionim funkcijama, globalnim prosečnim sažimanjem (GAP) i potpuno povezanim izlaznim slojevima, konstruiše se kompletan Deep Residual Shrinkage Network.
 
 <p align="center">
   <img src="/assets/img/DRSN/2025-11-29-DRSN-sr-Latn/DRSN_sr_Latn_2.png" alt="Deep Residual Shrinkage Network" width="55%">
 </p>
 
-## 5. Универсалност
+## 5. Mogućnost generalizacije
 
-Deep Residual Shrinkage Network всъщност е универсален метод за изучаване на характеристики (feature learning). Това е така, защото в много задачи за изучаване на характеристики, образците съдържат повече или по-малко шум, както и ирелевантна информация. Този шум и несвързана информация могат да повлияят на ефективността на обучението. Например:
+Deep Residual Shrinkage Network je, zapravo, opšta metoda za učenje obeležja. To je zato što u mnogim zadacima učenja obeležja, uzorci manje ili više sadrže određeni šum kao i irelevantne informacije. Ovaj šum i irelevantne informacije mogu uticati na performanse učenja obeležja. Na primer:
 
-При класификация на изображения, ако изображението съдържа много други обекти едновременно, тези обекти могат да бъдат разбрани като „шум“; Deep Residual Shrinkage Network може би ще успее, чрез механизма за внимание, да забележи този „шум“ и след това, чрез меко прагуване, да нулира характеристиките, съответстващи на този „шум“, което може да повиши точността на класификацията на изображения.
+U klasifikaciji slika, ako slika istovremeno sadrži mnogo drugih objekata, ovi objekti se mogu razumeti kao „šum“. Deep Residual Shrinkage Network bi mogao biti u stanju da iskoristi mehanizam pažnje da primeti ovaj „šum“, a zatim upotrebi meko pragovanje da postavi obeležja koja odgovaraju ovom „šumu“ na nulu, čime se potencijalno poboljšava tačnost klasifikacije slika.
 
-При разпознаване на реч, особено в по-шумна среда – например при разговор до пътя или във фабричен цех – Deep Residual Shrinkage Network може да повиши точността на разпознаването или най-малкото предоставя идея и методология за подобряване на точността на разпознаване на реч.
+U prepoznavanju govora, specifično u relativno bučnim okruženjima kao što su razgovori pored puta ili unutar fabričkih hala, Deep Residual Shrinkage Network može poboljšati tačnost prepoznavanja govora, ili barem ponuditi metodologiju sposobnu za poboljšanje tačnosti prepoznavanja govora.
 
-## Библиография (Reference)
+## Reference
 
 Minghang Zhao, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht, Deep residual shrinkage networks for fault diagnosis, IEEE Transactions on Industrial Informatics, 2020, 16(7): 4681-4690.
 
@@ -112,8 +112,8 @@ Minghang Zhao, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht, Deep resid
 }
 ```
 
-## Влияние и отзвук
+## Uticaj u akademskoj zajednici
 
-Броят на цитиранията на тази статия в Google Scholar надхвърля 1400.
+Ovaj rad je citiran više od 1400 puta na Google Scholar-u.
 
-Според непълна статистика, Deep Residual Shrinkage Network е била използвана директно или подобрена и приложена в над 1000 публикации в множество области, включително механика, електроенергетика, компютърно зрение, медицина, обработка на реч, текст, радарни системи, дистанционно наблюдение и други.
+Prema nepotpunim statistikama, Deep Residual Shrinkage Networks (DRSN) su korišćene u više od 1000 publikacija. Ovi radovi su ili direktno primenili ili unapredili mrežu kroz širok spektar oblasti, uključujući mašinstvo, elektroenergetiku, kompjuterski vid, zdravstvo, obradu govora, analizu teksta, radar i daljinsku detekciju.
