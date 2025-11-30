@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deep Residual Shrinkage Network: Metoda umetne inteligence za podatke z močnim šumom"
-date: 2025-11-29
+date: 2025-11-30
 tags: [Deep Learning, AI]
 mathjax: true
 ---
@@ -54,20 +54,20 @@ Mehanizme pozornosti je na področju računalniškega vida (Computer Vision) pre
 Squeeze-and-Excitation Network (SENet) je novejša metoda globokega učenja, ki uporablja mehanizme pozornosti. Pri različnih vzorcih je prispevek različnih kanalov značilk (feature channels) h klasifikacijski nalogi pogosto različen. SENet uporablja majhno podmrežo za pridobitev niza uteži, nato pa te uteži pomnoži z značilkami posameznih kanalov, da prilagodi velikost značilk v vsakem kanalu. Ta proces lahko razumemo kot uporabo različnih stopenj pozornosti na različnih kanalih značilk.
 
 <p align="center">
-  <img src="/assets/img/DRSN/2025-11-29-DRSN-sl/SENET_sl_1.png" alt="Squeeze-and-Excitation Network" width="90%">
+  <img src="/assets/img/DRSN/2025-11-30-DRSN-sl/SENET_sl_1.png" alt="Squeeze-and-Excitation Network" width="90%">
 </p>
 
 Na ta način ima vsak vzorec svojo neodvisno skupino uteži. Z drugimi besedami, uteži dveh poljubnih vzorcev sta različni. V SENet je pot za pridobitev uteži naslednja: "Globalno združevanje (global pooling) → Polno povezana plast → ReLU funkcija → Polno povezana plast → Sigmoid funkcija".
 
 <p align="center">
-  <img src="/assets/img/DRSN/2025-11-29-DRSN-sl/SENET_sl_2.png" alt="Squeeze-and-Excitation Network" width="60%">
+  <img src="/assets/img/DRSN/2025-11-30-DRSN-sl/SENET_sl_2.png" alt="Squeeze-and-Excitation Network" width="60%">
 </p>
 
 ## 4. Mehko pragovno krčenje z globokim mehanizmom pozornosti
 Deep Residual Shrinkage Network (DRSN) si izposoja omenjeno strukturo podmreže SENet za implementacijo mehkega pragovnega krčenja s pomočjo globokega mehanizma pozornosti. Skozi podmrežo (označeno z rdečim okvirjem) se lahko naučimo nabora pragov za izvedbo mehkega pragovnega krčenja na vsakem kanalu značilk.
 
 <p align="center">
-  <img src="/assets/img/DRSN/2025-11-29-DRSN-sl/DRSN_sl_1.png" alt="Deep Residual Shrinkage Network" width="75%">
+  <img src="/assets/img/DRSN/2025-11-30-DRSN-sl/DRSN_sl_1.png" alt="Deep Residual Shrinkage Network" width="75%">
 </p>
 
 V tej podmreži se najprej izračuna absolutna vrednost vseh značilk vhodne mape značilk (feature map). Nato se s pomočjo globalnega povprečnega združevanja (global average pooling) in povprečenja pridobi značilka, ki jo označimo z A. V drugi poti se mapa značilk po globalnem povprečnem združevanju vnese v majhno polno povezano mrežo. Ta polno povezana mreža uporablja funkcijo Sigmoid kot zadnjo plast, da normalizira izhod na vrednost med 0 in 1, s čimer dobimo koeficient, ki ga označimo z α. Končni prag lahko zapišemo kot α × A. Torej je prag produkt števila med 0 in 1 ter povprečja absolutnih vrednosti mape značilk. **Ta način ne zagotavlja le, da je prag pozitiven, ampak tudi, da ni prevelik.**
@@ -77,7 +77,7 @@ V tej podmreži se najprej izračuna absolutna vrednost vseh značilk vhodne map
 Na koncu z zlaganjem določenega števila osnovnih modulov ter konvolucijskih plasti, paketne normalizacije (batch normalization), aktivacijskih funkcij, globalnega povprečnega združevanja in polno povezane izhodne plasti dobimo celotno mrežo DRSN.
 
 <p align="center">
-  <img src="/assets/img/DRSN/2025-11-29-DRSN-sl/DRSN_sl_2.png" alt="Deep Residual Shrinkage Network" width="55%">
+  <img src="/assets/img/DRSN/2025-11-30-DRSN-sl/DRSN_sl_2.png" alt="Deep Residual Shrinkage Network" width="55%">
 </p>
 
 ## 5. Splošna uporabnost
