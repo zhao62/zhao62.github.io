@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Deep Residual Shrinkage Network: Highly Noisy Data khatir ek Artificial Intelligence Method"
-subtitle: "Deep Residual Shrinkage Network: An Artificial Intelligence Method for Highly Noisy Data"
+subtitle: "An Artificial Intelligence Method for Highly Noisy Data"
 date: 2025-12-08
 tags: [Deep Learning, AI]
 mathjax: true
