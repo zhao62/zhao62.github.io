@@ -6,10 +6,15 @@ author: Zhao62
 # 启用 Beautiful Jekyll 主题
 remote_theme: daattali/beautiful-jekyll
 
+# 配置分页参数
+paginate: 20               # 每页显示的文章数量，你可以改成 5 或 20
+paginate_path: "/page:num/" # 分页后的路径结构 (例如 /page2/, /page3/)
+
 # 必须的插件
 plugins:
   - jekyll-remote-theme
   - jekyll-seo-tag
+  - jekyll-paginate
 
 # 主题美化设置
 beautiful-jekyll:
