@@ -8,50 +8,77 @@ subtitle: ""
 header.intro-header { display: none !important; }
 .page-heading { display: none !important; }
 div.container[role="main"] { margin-top: 30px !important; }
-/* 分页按钮简单的样式调整 */
-.pager li > a, .pager li > span {
-    border-radius: 5px;
-    padding: 10px 20px;
-    border: 1px solid #ddd;
-    color: #404040;
+
+/* --- 以前的 CSS 保持不变 --- */
+.post-list li { margin-bottom: 15px; }
+.post-list span { color: #666; font-size: 0.9em; }
+.post-list a { font-weight: bold; font-size: 1.1em; }
+
+/* --- 新增：数字分页的样式 --- */
+.pagination-container {
+    text-align: center;
+    margin-top: 40px;
 }
-.pager li > a:hover {
+.pagination-item {
+    display: inline-block;
+    padding: 5px 12px;
+    margin: 0 2px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #337ab7;
+    text-decoration: none;
+    font-size: 16px;
+}
+.pagination-item:hover {
     background-color: #eee;
     text-decoration: none;
+    color: #23527c;
+}
+.pagination-item.active {
+    background-color: #337ab7;
+    color: white;
+    border-color: #337ab7;
+    pointer-events: none; /* 当前页不可点击 */
 }
 </style>
 
-### 📚 Recent Posts
+<!-- 问题1修复：使用 h3 标签代替 ### -->
+<h3>📚 Recent Posts</h3>
 
-<!-- 将 site.posts 改为 paginator.posts -->
 <ul class="post-list" style="list-style-type: none; padding-left: 0;">
   {% for post in paginator.posts %}
-    <li style="margin-bottom: 15px;">
-      <span style="color: #666; font-size: 0.9em;">{{ post.date | date: "%Y-%m-%d" }}</span>
+    <li>
+      <span>{{ post.date | date: "%Y-%m-%d" }}</span>
       &nbsp;
-      <a href="{{ post.url | relative_url }}" style="font-weight: bold; font-size: 1.1em;">
+      <a href="{{ post.url | relative_url }}">
         {{ post.title }}
       </a>
     </li>
   {% endfor %}
 </ul>
 
-<!-- 添加翻页按钮 (Pager) -->
+<!-- 问题2修复：数字分页逻辑 -->
 {% if paginator.total_pages > 1 %}
-<ul class="pager">
-  {% if paginator.previous_page %}
-  <li class="previous">
-    <a href="{{ paginator.previous_page_path | relative_url }}">&larr; Newer Posts</a>
-  </li>
-  {% endif %}
+<div class="pagination-container">
   
-  {% if paginator.next_page %}
-  <li class="next">
-    <a href="{{ paginator.next_page_path | relative_url }}">Older Posts &rarr;</a>
-  </li>
-  {% endif %}
-</ul>
+  <!-- 循环生成页码 1, 2, 3 ... -->
+  {% for page in (1..paginator.total_pages) %}
+    {% if page == paginator.page %}
+      <!-- 当前页：高亮显示，不可点击 -->
+      <span class="pagination-item active">{{ page }}</span>
+    {% elsif page == 1 %}
+      <!-- 第一页：链接通常是根目录 -->
+      <a class="pagination-item" href="{{ '/' | relative_url }}">{{ page }}</a>
+    {% else %}
+      <!-- 其他页：使用 paginate_path 配置 (如 /page2/) -->
+      <a class="pagination-item" href="{{ site.paginate_path | replace: ':num', page | relative_url }}">{{ page }}</a>
+    {% endif %}
+  {% endfor %}
+
+</div>
 {% endif %}
 
 <br>
-![Visitor Count](https://visitor-badge.laobi.icu/badge?page_id=zhao62.zhao62.github.io)
+
+<!-- 问题1修复：使用 img 标签代替 Markdown 图片语法 -->
+<img src="https://visitor-badge.laobi.icu/badge?page_id=zhao62.zhao62.github.io" alt="Visitor Count">
