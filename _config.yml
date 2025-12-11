@@ -2,6 +2,7 @@
 title: The Voyage
 description: 专注 AI 与深度学习的研究笔记
 author: Zhao62
+google_analytics: "G-4396ZM3K03"
 
 # 启用 Beautiful Jekyll 主题
 remote_theme: daattali/beautiful-jekyll
