@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Deep Residual Shrinkage Network: Highly Noisy Data-ാന്തു Use കൊർചെ ഏക Artificial Intelligence Method"
+title: "Deep Residual Shrinkage Network: Highly Noisy Data-അന്തു Use കൊർചെ ഏക Artificial Intelligence Method"
 subtitle: "An Artificial Intelligence Method for Highly Noisy Data"
 date: 2025-12-11
 tags: [Deep Learning, AI]
