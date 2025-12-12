@@ -17,6 +17,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-sitemap
+  - jekyll-feed
 
 # 主题美化设置
 beautiful-jekyll:
