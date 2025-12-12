@@ -42,8 +42,12 @@ div.container[role="main"] { margin-top: 30px !important; }
 }
 </style>
 
-<!-- 问题1修复：使用 h3 标签代替 ### -->
-<h3>📚 Recent Posts</h3>
+<h3 style="display: inline-block; margin-right: 15px;">📚 Recent Posts</h3>
+
+<!-- 假设主题内置了 Font Awesome 图标库 -->
+<a href="{{ '/feed.xml' | relative_url }}" target="_blank" title="订阅 RSS Feed">
+    <i class="fa fa-rss-square" style="font-size: 24px; color: orange;"></i>
+</a>
 
 <ul class="post-list" style="list-style-type: none; padding-left: 0;">
   {% for post in paginator.posts %}
