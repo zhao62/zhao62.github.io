@@ -14,6 +14,12 @@ This article develops new deep learning methods, namely, deep residual shrinkage
   <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_Paper.png" alt="Deep Residual Shrinkage Networks for Fault Diagnosis" width="100%">
 </p>
 
+## Academic Impact
+
+This paper has received over 1,400 citations on Google Scholar.
+
+According to conservative estimates, Deep Residual Shrinkage Networks (DRSN) have been utilized in more than 1,000 publications. These works have either directly applied or improved upon the network across a wide range of fields, including mechanical engineering, electric power, computer vision, healthcare, speech processing, text analysis, radar, and remote sensing.
+
 ## Reference
 
 Minghang Zhao, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht, Deep residual shrinkage networks for fault diagnosis, IEEE Transactions on Industrial Informatics, 2020, 16(7): 4681-4690.
@@ -33,9 +39,3 @@ Minghang Zhao, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht, Deep resid
   doi       = {10.1109/TII.2019.2943898}
 }
 ```
-
-## Academic Impact
-
-This paper has received over 1,400 citations on Google Scholar.
-
-According to conservative estimates, Deep Residual Shrinkage Networks (DRSN) have been utilized in more than 1,000 publications. These works have either directly applied or improved upon the network across a wide range of fields, including mechanical engineering, electric power, computer vision, healthcare, speech processing, text analysis, radar, and remote sensing.
