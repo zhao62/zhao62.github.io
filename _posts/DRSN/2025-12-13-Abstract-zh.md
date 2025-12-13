@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "基于深度残差收缩网络的故障诊断"
+title: "基于深度残差收缩网络的故障诊断方法"
 subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-13
 tags: [深度学习, 故障诊断]
