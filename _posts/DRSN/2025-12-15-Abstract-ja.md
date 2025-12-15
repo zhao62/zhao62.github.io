@@ -7,6 +7,10 @@ tags: [ディープラーニング (Deep Learning), 故障診断]
 mathjax: true
 ---
 
+<p align="center" style="color: gray; font-style: italic;">
+  <strong><a href="https://homepage.hit.edu.cn/zhaominghang?lang=zh" target="_blank">Minghang Zhao</a>, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht</strong>
+</p>
+
 ## 概要 (Abstract)：
 
 本論文では、高ノイズの振動信号からの特徴学習能力を向上させ、高い故障診断精度を実現するために、新たなディープラーニング手法である「Deep Residual Shrinkage Networks (DRSN)」を提案する。本手法では、深層アーキテクチャ内に非線形変換層としてソフト閾値処理 (Soft Thresholding) を組み込むことで、重要でない特徴を除去する仕組みとなっている。さらに、閾値の適切な値を設定することが一般に困難であることを考慮し、提案するネットワークには、閾値を自動決定するための学習可能なモジュールとして専用のニューラルネットワークが統合されている。これにより、信号処理に関する高度な専門知識が不要となる。提案手法の有効性は、様々な種類のノイズを用いた実験により検証されている。
