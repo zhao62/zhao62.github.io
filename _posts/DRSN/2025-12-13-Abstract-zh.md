@@ -7,6 +7,10 @@ tags: [深度学习, 故障诊断]
 mathjax: true
 ---
 
+<p align="center">
+  <strong>Minghang Zhao, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht</strong>
+</p>
+
 ## 摘要：
 
 本文提出了一种新的深度学习方法——深度残差收缩网络（Deep Residual Shrinkage Networks, DRSN），旨在提升在强噪声振动信号条件下的特征学习能力，实现较高的故障诊断准确率。该方法在深层网络结构中引入软阈值函数作为非线性变换层，用于抑制和消除不重要的特征。由于阈值参数通常难以合理设定，所提出的深度残差收缩网络将若干专用神经网络作为可训练模块进行集成，以实现阈值的自适应确定，从而无需依赖信号处理方面的专业经验。通过在多种噪声类型条件下开展实验，验证了所提出方法的有效性。
