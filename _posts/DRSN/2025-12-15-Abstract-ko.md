@@ -16,7 +16,7 @@ mathjax: true
 </p>
 
 <p align="center">
-  <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_en.png" alt="用於故障診斷的深度殘差收縮網路" width="100%">
+  <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_en.png" alt="고장 진단을 위한 Deep Residual Shrinkage Networks" width="100%">
 </p>
 
 ## 학술적 영향 (Academic Impact)
