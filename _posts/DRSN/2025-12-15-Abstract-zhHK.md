@@ -7,6 +7,10 @@ tags: [深度學習, 故障診斷]
 mathjax: true
 ---
 
+<p align="center" style="color: gray; font-style: italic;">
+  <strong><a href="https://homepage.hit.edu.cn/zhaominghang?lang=zh" target="_blank">Minghang Zhao</a>, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht</strong>
+</p>
+
 ## 摘要 (Abstract)
 
 本文開發了一種新的深度學習方法，即「深度殘差收縮網絡」(Deep Residual Shrinkage Networks, DRSN)，旨在提升從高噪音震動訊號 (vibration signals) 中學習特徵的能力，並實現高準確度的故障診斷。我們將軟閾值化 (Soft thresholding) 作為非線性變換層嵌入到深度架構中，以剔除不重要的特徵。此外，鑑於設定合適的閾值通常具有挑戰性，所開發的 DRSN 整合了一些專門的神經網絡作為可訓練模組 (trainable modules) 來自動確定閾值，因此使用者無需具備訊號處理的專業知識。透過針對各類噪音的實驗，我們驗證了該方法的成效。
