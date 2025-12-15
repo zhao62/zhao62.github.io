@@ -15,6 +15,10 @@ mathjax: true
   <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_Paper.png" alt="用於故障診斷的深度殘差收縮網絡" width="100%">
 </p>
 
+<p align="center">
+  <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_en.png" alt="用於故障診斷的深度殘差收縮網路" width="100%">
+</p>
+
 ## 學術影響 (Academic Impact)
 
 本文在 Google Scholar 上已錄得超過 1,400 次引用。
