@@ -15,6 +15,10 @@ mathjax: true
   <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_Paper.png" alt="基于深度残差收缩网络的故障诊断" width="100%">
 </p>
 
+<p align="center">
+  <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_en.png" alt="基于深度残差收缩网络的故障诊断" width="100%">
+</p>
+
 ## 影响力情况
 
 该论文的谷歌学术引用量已经超过1400次。
