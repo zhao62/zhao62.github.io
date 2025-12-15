@@ -16,7 +16,7 @@ mathjax: true
 </p>
 
 <p align="center">
-  <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_en.png" alt="用於故障診斷的深度殘差收縮網路" width="100%">
+  <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_en.png" alt="用於故障診斷的深度殘差收縮網絡" width="100%">
 </p>
 
 ## 學術影響 (Academic Impact)
