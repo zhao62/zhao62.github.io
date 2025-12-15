@@ -7,8 +7,8 @@ tags: [深度学习, 故障诊断]
 mathjax: true
 ---
 
-<p align="center">
-  <strong>Minghang Zhao, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht</strong>
+<p align="center" style="color: gray; font-style: italic;">
+  <strong><a href="https://homepage.hit.edu.cn/zhaominghang?lang=zh" target="_blank">Minghang Zhao</a>, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht</strong>
 </p>
 
 ## 摘要：
