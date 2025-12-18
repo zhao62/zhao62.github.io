@@ -27,7 +27,7 @@ Este artículo desarrolla nuevos métodos de deep learning (aprendizaje profundo
 
 Este artículo ha recibido más de 1.400 citas en Google Scholar.
 
-Según estimaciones conservadoras, las **Deep Residual Shrinkage Networks (DRSN)** se han utilizado en más de 1.000 publicaciones. Estos trabajos han aplicado directamente esta red o la han mejorado en una amplia variedad de campos, que incluyen la ingeniería mecánica, la energía eléctrica, la visión por computador, la medicina, el procesamiento de voz, el análisis de texto, el radar y la teledetección.
+Según estimaciones conservadoras, las **Deep Residual Shrinkage Networks** (**DRSN**) se han utilizado en más de 1.000 publicaciones. Estos trabajos han aplicado directamente esta red o la han mejorado en una amplia variedad de campos, que incluyen la ingeniería mecánica, la energía eléctrica, la visión por computador, la medicina, el procesamiento de voz, el análisis de texto, el radar y la teledetección.
 
 ## Referencia
 
