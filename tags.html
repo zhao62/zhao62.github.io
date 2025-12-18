@@ -1,0 +1,40 @@
+---
+layout: page
+title: Tags
+subtitle: All tags used in the blog
+permalink: /tags/
+---
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      
+      <!-- 标签列表（云） -->
+      <div id="tag-cloud" style="padding-bottom: 20px;">
+        {% for tag in site.tags %}
+          <a href="#{{ tag[0] | slugify }}" class="btn btn-default btn-sm" style="margin-bottom: 5px;">
+            {{ tag[0] }} <span class="badge">{{ tag[1].size }}</span>
+          </a>
+        {% endfor %}
+      </div>
+
+      <hr>
+
+      <!-- 标签对应文章列表 -->
+      <div id="tag-list">
+        {% for tag in site.tags %}
+          <h3 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h3>
+          <ul>
+            {% for post in tag[1] %}
+              <li>
+                <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+                <span class="text-muted">- {{ post.date | date: "%B %-d, %Y" }}</span>
+              </li>
+            {% endfor %}
+          </ul>
+        {% endfor %}
+      </div>
+
+    </div>
+  </div>
+</div>
