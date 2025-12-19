@@ -7,6 +7,19 @@ tags: [Artificial Intelligence, Fault Diagnosis]
 mathjax: true
 ---
 
+<!-- 在这里粘贴字体设置代码 -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Tamil:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+  /* 强制将正文和标题字体改为 Noto Sans Tamil */
+  body, h1, h2, h3, h4, h5, h6, p, li, a {
+      font-family: 'Noto Sans Tamil', -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+      line-height: 1.7 !important; /* 增加行高，让泰米尔语不拥挤 */
+  }
+</style>
+
 <p align="center" style="color: gray; font-style: italic;">
   <strong><a href="https://homepage.hit.edu.cn/zhaominghang?lang=zh" target="_blank">Minghang Zhao</a>, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht</strong>
 </p>
