@@ -11,9 +11,15 @@ mathjax: true
   <strong><a href="https://homepage.hit.edu.cn/zhaominghang?lang=zh" target="_blank">Minghang Zhao</a>, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht</strong>
 </p>
 
+<!-- 开始 RTL 区域：正文内容设置为从右往左 -->
+<div dir="rtl" lang="ur" markdown="1">
+
 ## خلاصہ (Abstract)
 
 اس مضمون میں Deep Learning کے نئے طریقے وضع کیے گئے ہیں، جنہیں Deep Residual Shrinkage Networks کا نام دیا گیا ہے۔ ان کا مقصد انتہائی نوائز (noise) والے وائبریشن سگنلز (vibration signals) سے فیچر لرننگ (feature learning) کی صلاحیت کو بہتر بنانا اور فالٹ ڈائیگنوسس (fault diagnosis) میں اعلیٰ درستگی حاصل کرنا ہے۔ غیر اہم فیچرز کو ختم کرنے کے لیے، ڈیپ آرکیٹیکچرز (deep architectures) میں نان لینیئر ٹرانسفارمیشن لیئرز (nonlinear transformation layers) کے طور پر "Soft Thresholding" کو شامل کیا گیا ہے۔ مزید برآں، یہ دیکھتے ہوئے کہ تھریشولڈز (thresholds) کے لیے مناسب ویلیوز کا تعین کرنا عام طور پر مشکل ہوتا ہے، ان نیٹ ورکس میں چند مخصوص نیورل نیٹ ورکس (neural networks) کو ٹرین ایبل ماڈیولز (trainable modules) کے طور پر ضم کیا گیا ہے۔ یہ خودکار طریقے سے تھریشولڈز کا تعین کرتے ہیں، تاکہ سگنل پروسیسنگ میں کسی خاص پیشہ ورانہ مہارت کی ضرورت نہ رہے۔ تیار کردہ طریقوں کی افادیت کی تصدیق مختلف اقسام کے نوائز (noise) کے ساتھ کیے گئے تجربات کے ذریعے کی گئی ہے۔
+
+</div>
+<!-- 结束 RTL 区域 -->
 
 <p align="center">
   <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_Paper.png" alt="Deep Residual Shrinkage Networks for Fault Diagnosis" width="100%">
@@ -23,11 +29,17 @@ mathjax: true
   <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_en.png" alt="Deep Residual Shrinkage Networks for Fault Diagnosis" width="100%">
 </p>
 
+<!-- 重新开始 RTL 区域 -->
+<div dir="rtl" lang="ur" markdown="1">
+
 ## علمی اثرات (Academic Impact)
 
 اس مقالے کو گوگل اسکالر (Google Scholar) پر 1,400 سے زائد بار حوالہ جات (citations) مل چکے ہیں۔
 
 محتاط اندازوں کے مطابق، Deep Residual Shrinkage Networks (DRSN) کو 1,000 سے زائد اشاعتوں میں استعمال کیا گیا ہے۔ ان تحقیقی کاموں میں مکینیکل انجینئرنگ، الیکٹرک پاور، کمپیوٹر ویژن، ہیلتھ کیئر، اسپیچ پروسیسنگ، ٹیکسٹ اینالیسس، ریڈار، اور ریموٹ سینسنگ سمیت وسیع پیمانے پر شعبوں میں اس نیٹ ورک کا براہ راست اطلاق کیا گیا ہے یا اس میں مزید بہتری لائی گئی ہے۔
+
+</div>
+<!-- 结束 RTL 区域，以下英文参考文献保持默认 LTR 格式 -->
 
 ## حوالہ جات (Reference)
 
