@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Fault Diagnosis کے لیے <br> Deep Residual Shrinkage Networks"
-subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
+title: "Deep Residual Shrinkage Networks for Fault Diagnosis"
+subtitle: "Fault Diagnosis کے لیے Deep Residual Shrinkage Networks"
 date: 2025-12-19
 tags: [Artificial Intelligence, Fault Diagnosis]
 mathjax: true
@@ -12,37 +12,54 @@ mathjax: true
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- 2. 注入 CSS 强制修正排版和字体 -->
+<!-- 2. 注入精细化 CSS -->
 <style>
-  /* 强制修正大标题 (针对 Beautiful Jekyll 主题) */
+  /* --- 标题区域设置 --- */
+  
+  /* H1 大标题：保持英文格式 (从左往右，标准字体) */
   header h1, .post-heading h1, .header-section h1 {
-    font-family: 'Noto Nastaliq Urdu', serif !important;
-    direction: rtl !important;
-    text-align: center !important; /* 标题建议居中，或者改成 right */
-    line-height: 1.6 !important;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+    direction: ltr !important; /* 英文从左往右 */
+    text-align: center !important;
+    font-weight: bold !important;
   }
   
-  /* 强制修正副标题 */
+  /* 副标题：设置为乌尔都语格式 (从右往左，书法字体) */
   header .subheading, .post-heading .subheading {
     font-family: 'Noto Nastaliq Urdu', serif !important;
-    direction: rtl !important;
+    direction: rtl !important; /* 强制从右往左 */
     text-align: center !important;
+    font-size: 1.8em !important; /* 稍微放大一点，因为 Nastaliq 字体偏小 */
+    line-height: 1.8 !important;
+    margin-top: 10px !important;
   }
 
-  /* 定义乌尔都语正文样式类 */
+  /* --- 正文区域设置 --- */
+
+  /* 定义乌尔都语正文容器 */
   .urdu-text {
     font-family: 'Noto Nastaliq Urdu', serif !important;
     direction: rtl !important;
-    text-align: right !important; /* 强制靠右 */
-    font-size: 1.3em !important;   /* Nastaliq 字体通常比较小，需要放大 */
-    line-height: 2.2 !important;   /* 增加行高，防止字体重叠 */
+    text-align: right !important; /* 强制靠右对齐 */
+    font-size: 1.3em !important;
+    line-height: 2.4 !important;   /* 增加行高，阅读更舒适 */
+    margin-bottom: 2em;
   }
 
-  /* 调整标题与正文的间距 */
+  /* 调整乌尔都语标题 (Abstract, Impact) */
   .urdu-text h2 {
+    font-family: 'Noto Nastaliq Urdu', serif !important;
     margin-top: 1.5em;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.8em;
     font-weight: bold;
+    font-size: 1.5em;
+  }
+  
+  /* 调整 Reference 标题的样式 */
+  .ref-header {
+    margin-top: 3em !important;
+    border-top: 1px solid #eee;
+    padding-top: 2em;
   }
 </style>
 
@@ -50,7 +67,7 @@ mathjax: true
   <strong><a href="https://homepage.hit.edu.cn/zhaominghang?lang=zh" target="_blank">Minghang Zhao</a>, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht</strong>
 </p>
 
-<!-- 开始乌尔都语区域 -->
+<!-- 乌尔都语正文区域 -->
 <div class="urdu-text" markdown="1">
 
 ## خلاصہ (Abstract)
@@ -58,7 +75,6 @@ mathjax: true
 اس مضمون میں Deep Learning کے نئے طریقے وضع کیے گئے ہیں، جنہیں Deep Residual Shrinkage Networks کا نام دیا گیا ہے۔ ان کا مقصد انتہائی نوائز (noise) والے وائبریشن سگنلز (vibration signals) سے فیچر لرننگ (feature learning) کی صلاحیت کو بہتر بنانا اور فالٹ ڈائیگنوسس (fault diagnosis) میں اعلیٰ درستگی حاصل کرنا ہے۔ غیر اہم فیچرز کو ختم کرنے کے لیے، ڈیپ آرکیٹیکچرز (deep architectures) میں نان لینیئر ٹرانسفارمیشن لیئرز (nonlinear transformation layers) کے طور پر "Soft Thresholding" کو شامل کیا گیا ہے۔ مزید برآں، یہ دیکھتے ہوئے کہ تھریشولڈز (thresholds) کے لیے مناسب ویلیوز کا تعین کرنا عام طور پر مشکل ہوتا ہے، ان نیٹ ورکس میں چند مخصوص نیورل نیٹ ورکس (neural networks) کو ٹرین ایبل ماڈیولز (trainable modules) کے طور پر ضم کیا گیا ہے۔ یہ خودکار طریقے سے تھریشولڈز کا تعین کرتے ہیں، تاکہ سگنل پروسیسنگ میں کسی خاص پیشہ ورانہ مہارت کی ضرورت نہ رہے۔ تیار کردہ طریقوں کی افادیت کی تصدیق مختلف اقسام کے نوائز (noise) کے ساتھ کیے گئے تجربات کے ذریعے کی گئی ہے۔
 
 </div>
-<!-- 结束乌尔都语区域 -->
 
 <p align="center">
   <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_Paper.png" alt="Deep Residual Shrinkage Networks for Fault Diagnosis" width="100%">
@@ -68,7 +84,7 @@ mathjax: true
   <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_en.png" alt="Deep Residual Shrinkage Networks for Fault Diagnosis" width="100%">
 </p>
 
-<!-- 重新开始乌尔都语区域 -->
+<!-- 乌尔都语正文区域 -->
 <div class="urdu-text" markdown="1">
 
 ## علمی اثرات (Academic Impact)
@@ -79,7 +95,9 @@ mathjax: true
 
 </div>
 
-<!-- 英文参考文献保持默认格式 (从左往右)，这样更专业 -->
+<!-- 英文参考文献区域 (保持 LTR) -->
+<div class="ref-header" markdown="1">
+
 ## Reference (حوالہ جات)
 
 Minghang Zhao, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht, Deep residual shrinkage networks for fault diagnosis, IEEE Transactions on Industrial Informatics, 2020, 16(7): 4681-4690.
