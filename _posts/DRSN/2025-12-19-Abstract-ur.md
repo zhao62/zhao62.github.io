@@ -7,19 +7,58 @@ tags: [Artificial Intelligence, Fault Diagnosis]
 mathjax: true
 ---
 
+<!-- 1. 引入乌尔都语专业字体 (Noto Nastaliq Urdu) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- 2. 注入 CSS 强制修正排版和字体 -->
+<style>
+  /* 强制修正大标题 (针对 Beautiful Jekyll 主题) */
+  header h1, .post-heading h1, .header-section h1 {
+    font-family: 'Noto Nastaliq Urdu', serif !important;
+    direction: rtl !important;
+    text-align: center !important; /* 标题建议居中，或者改成 right */
+    line-height: 1.6 !important;
+  }
+  
+  /* 强制修正副标题 */
+  header .subheading, .post-heading .subheading {
+    font-family: 'Noto Nastaliq Urdu', serif !important;
+    direction: rtl !important;
+    text-align: center !important;
+  }
+
+  /* 定义乌尔都语正文样式类 */
+  .urdu-text {
+    font-family: 'Noto Nastaliq Urdu', serif !important;
+    direction: rtl !important;
+    text-align: right !important; /* 强制靠右 */
+    font-size: 1.3em !important;   /* Nastaliq 字体通常比较小，需要放大 */
+    line-height: 2.2 !important;   /* 增加行高，防止字体重叠 */
+  }
+
+  /* 调整标题与正文的间距 */
+  .urdu-text h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+  }
+</style>
+
 <p align="center" style="color: gray; font-style: italic;">
   <strong><a href="https://homepage.hit.edu.cn/zhaominghang?lang=zh" target="_blank">Minghang Zhao</a>, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht</strong>
 </p>
 
-<!-- 开始 RTL 区域：正文内容设置为从右往左 -->
-<div dir="rtl" lang="ur" markdown="1">
+<!-- 开始乌尔都语区域 -->
+<div class="urdu-text" markdown="1">
 
 ## خلاصہ (Abstract)
 
 اس مضمون میں Deep Learning کے نئے طریقے وضع کیے گئے ہیں، جنہیں Deep Residual Shrinkage Networks کا نام دیا گیا ہے۔ ان کا مقصد انتہائی نوائز (noise) والے وائبریشن سگنلز (vibration signals) سے فیچر لرننگ (feature learning) کی صلاحیت کو بہتر بنانا اور فالٹ ڈائیگنوسس (fault diagnosis) میں اعلیٰ درستگی حاصل کرنا ہے۔ غیر اہم فیچرز کو ختم کرنے کے لیے، ڈیپ آرکیٹیکچرز (deep architectures) میں نان لینیئر ٹرانسفارمیشن لیئرز (nonlinear transformation layers) کے طور پر "Soft Thresholding" کو شامل کیا گیا ہے۔ مزید برآں، یہ دیکھتے ہوئے کہ تھریشولڈز (thresholds) کے لیے مناسب ویلیوز کا تعین کرنا عام طور پر مشکل ہوتا ہے، ان نیٹ ورکس میں چند مخصوص نیورل نیٹ ورکس (neural networks) کو ٹرین ایبل ماڈیولز (trainable modules) کے طور پر ضم کیا گیا ہے۔ یہ خودکار طریقے سے تھریشولڈز کا تعین کرتے ہیں، تاکہ سگنل پروسیسنگ میں کسی خاص پیشہ ورانہ مہارت کی ضرورت نہ رہے۔ تیار کردہ طریقوں کی افادیت کی تصدیق مختلف اقسام کے نوائز (noise) کے ساتھ کیے گئے تجربات کے ذریعے کی گئی ہے۔
 
 </div>
-<!-- 结束 RTL 区域 -->
+<!-- 结束乌尔都语区域 -->
 
 <p align="center">
   <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_Paper.png" alt="Deep Residual Shrinkage Networks for Fault Diagnosis" width="100%">
@@ -29,8 +68,8 @@ mathjax: true
   <img src="/assets/img/DRSN/2025-11-25-DRSN-en/DRSN_en.png" alt="Deep Residual Shrinkage Networks for Fault Diagnosis" width="100%">
 </p>
 
-<!-- 重新开始 RTL 区域 -->
-<div dir="rtl" lang="ur" markdown="1">
+<!-- 重新开始乌尔都语区域 -->
+<div class="urdu-text" markdown="1">
 
 ## علمی اثرات (Academic Impact)
 
@@ -39,9 +78,9 @@ mathjax: true
 محتاط اندازوں کے مطابق، Deep Residual Shrinkage Networks (DRSN) کو 1,000 سے زائد اشاعتوں میں استعمال کیا گیا ہے۔ ان تحقیقی کاموں میں مکینیکل انجینئرنگ، الیکٹرک پاور، کمپیوٹر ویژن، ہیلتھ کیئر، اسپیچ پروسیسنگ، ٹیکسٹ اینالیسس، ریڈار، اور ریموٹ سینسنگ سمیت وسیع پیمانے پر شعبوں میں اس نیٹ ورک کا براہ راست اطلاق کیا گیا ہے یا اس میں مزید بہتری لائی گئی ہے۔
 
 </div>
-<!-- 结束 RTL 区域，以下英文参考文献保持默认 LTR 格式 -->
 
-## حوالہ جات (Reference)
+<!-- 英文参考文献保持默认格式 (从左往右)，这样更专业 -->
+## Reference (حوالہ جات)
 
 Minghang Zhao, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht, Deep residual shrinkage networks for fault diagnosis, IEEE Transactions on Industrial Informatics, 2020, 16(7): 4681-4690.
 
@@ -59,4 +98,3 @@ Minghang Zhao, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht, Deep resid
   pages     = {4681-4690},
   doi       = {10.1109/TII.2019.2943898}
 }
-```
