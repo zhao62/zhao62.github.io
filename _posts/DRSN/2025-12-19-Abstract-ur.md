@@ -98,3 +98,4 @@ Minghang Zhao, Shisheng Zhong, Xuyun Fu, Baoping Tang, Michael Pecht, Deep resid
   pages     = {4681-4690},
   doi       = {10.1109/TII.2019.2943898}
 }
+```
