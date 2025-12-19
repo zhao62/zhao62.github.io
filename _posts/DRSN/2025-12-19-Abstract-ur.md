@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Fault Diagnosis کے لیے Deep Residual Shrinkage Networks"
+title: "Fault Diagnosis کے لیے <br> Deep Residual Shrinkage Networks"
 subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-19
 tags: [Artificial Intelligence, Fault Diagnosis]
