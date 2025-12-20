@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Deep Residual Shrinkage Networks for Fault Diagnosis"
-subtitle: "شبكات الانكماش المتبقية العميقة لتشخيص الأعطال"
+title: "شبكات الانكماش المتبقية العميقة لتشخيص الأعطال"
+subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-20
 tags: [Artificial Intelligence, Fault Diagnosis]
 mathjax: true
