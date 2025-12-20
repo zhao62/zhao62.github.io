@@ -6,6 +6,10 @@ tags: ["Marine Diesel Engine", "Fault Diagnosis"]
 mathjax: true
 ---
 
+<p align="center" style="color: gray; font-style: italic;">
+  <strong>Congcong Luo, <a href="https://homepage.hit.edu.cn/zhaominghang?lang=zh" target="_blank">Minghang Zhao</a>, Song Fu, Yan Zhang, Yan Han, Qingqing Huang, Zhiquan Cui</strong>
+</p>
+
 ## Abstract
 
 Worn piston rings disrupt the sealing performance of combustion chambers, reducing the compression ratio and combustion efficiency, thereby affecting engine power. Currently, limited in-depth simulations have been conducted on gas leakage of combustion chamber caused by piston ring faults. This paper presents a thermal-fluid-structure coupling simulation of a piston rings in a large marine diesel engine, focusing on the thermal parameter variations induced by its fault. The simulation results indicate that, under the given simulated conditions, the maximum deformation of the piston ring is 37.922 μm. As piston ring wear accumulates, both the velocity and pressure of gas leakage decrease, and the rate of decrease is diminished accordingly. Additionally, piston ring sticking may significantly raise gas pressure, resulting in a noticeable increase in the pressure drop at the inlet of ring-liner gap.
