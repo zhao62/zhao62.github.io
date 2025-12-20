@@ -7,6 +7,10 @@ tags: ["故障診斷", "船用柴油引擎", "熱流固耦合分析"]
 mathjax: true
 ---
 
+<p align="center" style="color: gray; font-style: italic;">
+  <strong>Congcong Luo, <a href="https://homepage.hit.edu.cn/zhaominghang?lang=zh" target="_blank">Minghang Zhao</a>, Song Fu, Yan Zhang, Yan Han, Qingqing Huang, Zhiquan Cui</strong>
+</p>
+
 針對大型船用柴油機難以進行破壞性實驗的局限性，數值模擬（Numerical simulation）已成為揭示活塞環故障機理及彌補實驗數據缺失的關鍵手段。本論文針對活塞環、活塞及氣缸壁系統，建立了一個融合二維流體域與三維活塞環結構的耦合模型，並在考慮熱-流-固（Thermal-fluid-structure）多物理場因素的條件下進行了求解。相較於單一的流體分析，該模型將氣體黏度隨溫度和壓力的變化規律、k-𝜖 紊流模型（Turbulence model）以及受力後的活塞環結構變形納入統一計算架構，以模擬氣缸內複雜的物理環境。
 
 <p align="center">
