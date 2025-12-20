@@ -12,26 +12,28 @@ mathjax: true
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;700&display=swap" rel="stylesheet">
 
-<!-- 2. 注入精细化 CSS -->
+<!-- 2. 注入修正后的 CSS -->
 <style>
-  /* --- 标题区域设置 --- */
+  /* --- 标题区域设置 (关键修正) --- */
   
-  /* H1 大标题：保持英文格式 (从左往右，标准字体) */
+  /* H1 主标题：内容是阿拉伯语，必须强制 RTL 和阿拉伯字体 */
   header h1, .post-heading h1, .header-section h1 {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
-    direction: ltr !important; /* 英文从左往右 */
+    font-family: 'Noto Naskh Arabic', serif !important;
+    direction: rtl !important; /* 修正：从右向左 */
     text-align: center !important;
-    font-weight: bold !important;
+    font-weight: 700 !important;
+    line-height: 1.4 !important;
   }
   
-  /* 副标题：设置为阿拉伯语格式 (从右往左，标准 Naskh 字体) */
+  /* 副标题：内容是英语，必须强制 LTR 和英文系统字体 */
   header .subheading, .post-heading .subheading {
-    font-family: 'Noto Naskh Arabic', serif !important;
-    direction: rtl !important; /* 强制从右往左 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif !important;
+    direction: ltr !important; /* 修正：从左向右 */
     text-align: center !important;
-    font-size: 1.6em !important; 
-    line-height: 1.6 !important;
-    margin-top: 10px !important;
+    font-size: 1.1em !important; 
+    font-weight: 300 !important;
+    margin-top: 15px !important;
+    color: #e0e0e0; /* 适配深色/浅色背景，或保持默认 */
   }
 
   /* --- 正文区域设置 --- */
@@ -40,26 +42,28 @@ mathjax: true
   .arabic-text {
     font-family: 'Noto Naskh Arabic', serif !important;
     direction: rtl !important;
-    text-align: right !important; /* 强制靠右对齐 */
-    font-size: 1.2em !important;
-    line-height: 2.0 !important;   /* 阿拉伯语 Naskh 字体不需要像乌尔都语那么大的行高，2.0 很舒适 */
+    text-align: justify !important; /* 建议：两端对齐让阿拉伯文排版更像正式文章 */
+    text-align-last: right !important; /* 最后一行靠右 */
+    font-size: 1.3em !important; /* 稍微调大字号，提升可读性 */
+    line-height: 2.2 !important;  /* 增加行高，适应阿拉伯语的元音符号 */
     margin-bottom: 2em;
   }
 
-  /* 调整阿拉伯语标题 */
-  .arabic-text h2 {
+  /* 调整阿拉伯语小标题 */
+  .arabic-text h2, .arabic-text h3 {
     font-family: 'Noto Naskh Arabic', serif !important;
     margin-top: 1.5em;
-    margin-bottom: 0.8em;
-    font-weight: bold;
-    font-size: 1.5em;
+    margin-bottom: 0.6em;
+    font-weight: 700;
   }
   
-  /* 调整 Reference 标题的样式 */
+  /* 调整 Reference 标题区域 */
   .ref-header {
     margin-top: 3em !important;
     border-top: 1px solid #eee;
     padding-top: 2em;
+    direction: ltr !important; /* 参考文献主要是英文，保持 LTR */
+    text-align: left !important;
   }
 </style>
 
@@ -95,7 +99,7 @@ mathjax: true
 
 </div>
 
-<!-- 英文参考文献区域 (保持 LTR) -->
+<!-- 英文参考文献区域 -->
 <div class="ref-header" markdown="1">
 
 ## Reference (المراجع)
