@@ -20,9 +20,9 @@ State-of-health (SOH) estimation of lithium-ion batteries is crucial for ensurin
 
 ## Reference
 
-X. Li, M. Zhao, S. Zhong, et al. Deep transfer learning enabled online state-of-health estimation of lithium-ion batteries under small samples across different cathode materials, ambient temperature and charge-discharge protocols[J]. Journal of Power Sources, 2025, 650: 237503.
+X. Li, M. Zhao, S. Zhong, et al. Deep transfer learning enabled online state-of-health estimation of lithium-ion batteries under small samples across different cathode materials, ambient temperature and charge-discharge protocols [J]. Journal of Power Sources, 2025, 650: 237503.
 
-[https://www.sciencedirect.com/science/article/pii/S0378775325013394](https://www.sciencedirect.com/science/article/pii/S0378775325013394)
+[Article Page](https://www.sciencedirect.com/science/article/pii/S0378775325013394)
 
 ## BibTeX
 ```bibtex
