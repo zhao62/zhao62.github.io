@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "考慮熱-流-固因素的船用柴油機活塞環數值模擬：從正常到漏氣狀態"
+title: "考慮熱-流-固因素的船用柴油引擎活塞環數值模擬：從正常到漏氣狀態"
 subtitle: "Numerical simulation of piston rings in marine diesel engines considering thermal-fluid-structure factors: From normal to gas leakage conditions"
 date: 2025-12-20
 tags: ["故障診斷", "船用柴油引擎", "熱流固耦合分析"]
@@ -11,13 +11,13 @@ mathjax: true
   <strong>Congcong Luo, <a href="https://homepage.hit.edu.cn/zhaominghang?lang=zh" target="_blank">Minghang Zhao</a>, Song Fu, Yan Zhang, Yan Han, Qingqing Huang, Zhiquan Cui</strong>
 </p>
 
-針對大型船用柴油機難以進行破壞性實驗的局限性，數值模擬（Numerical simulation）已成為揭示活塞環故障機理及彌補實驗數據缺失的關鍵手段。本論文針對活塞環、活塞及氣缸壁系統，建立了一個融合二維流體域與三維活塞環結構的耦合模型，並在考慮熱-流-固（Thermal-fluid-structure）多物理場因素的條件下進行了求解。相較於單一的流體分析，該模型將氣體黏度隨溫度和壓力的變化規律、k-𝜖 紊流模型（Turbulence model）以及受力後的活塞環結構變形納入統一計算架構，以模擬氣缸內複雜的物理環境。
+針對大型船用柴油引擎難以進行破壞性實驗的局限性，數值模擬（Numerical simulation）已成為揭示活塞環故障機制及彌補實驗數據缺失的關鍵手段。本論文針對活塞環、活塞及氣缸壁系統，建立了一個融合二維流體域與三維活塞環結構的耦合模型，並在考慮熱-流-固（Thermal-fluid-structure）多物理場因素的條件下進行了求解。相較於單一的流體分析，該模型將氣體黏度隨溫度和壓力的變化規律、k-𝜖 紊流模型（Turbulence model）以及受力後的活塞環結構變形納入統一計算架構，以模擬氣缸內複雜的物理環境。
 
 <p align="center">
   <img src="/assets/img/LuoNum/Fig1.png" alt="Gas leakage fluid domain" width="90%">
 </p>
 
-首先，透過對比活塞環在未磨損與磨損狀態下的工作表現，研究了其微觀變形與燃氣洩漏流場的演變規律，並探討了流體力學方面的非線性特徵。模擬結果表明，在正常狀態下的最大爆發壓力時刻，活塞環的截面輪廓仍會產生較為顯著的彈性變形；當活塞環因潤滑失效發生磨損時，隨著磨損間隙的增加，儘管洩漏通道變寬導致密封性能下降，但模擬顯示的局部氣體洩漏速度和壓力呈現下降趨勢，且下降速率逐漸減緩。這一發現透過可視化的速度與壓力雲圖進行了直觀展示，為理解磨損引致的洩漏機理提供了新視角。
+首先，透過對比活塞環在未磨損與磨損狀態下的工作表現，研究了其微觀變形與燃氣洩漏流場的演變規律，並探討了流體力學方面的非線性特徵。模擬結果表明，在正常狀態下的最大爆發壓力時刻，活塞環的截面輪廓仍會產生較為顯著的彈性變形；當活塞環因潤滑失效發生磨損時，隨著磨損間隙的增加，儘管洩漏通道變寬導致密封性能下降，但模擬顯示的局部氣體洩漏速度和壓力呈現下降趨勢，且下降速率逐漸減緩。這一發現透過可視化的速度與壓力雲圖進行了直觀展示，為理解磨損引致的洩漏機制提供了新視角。
 
 <p align="center">
   <img src="/assets/img/LuoNum/Fig2.png" alt="Deformation of piston ring" width="90%">
@@ -27,7 +27,7 @@ mathjax: true
   <img src="/assets/img/LuoNum/Fig3.png" alt="Results of piston ring wear" width="100%">
 </p>
 
-其次，活塞環膠著（Ring sticking）可能是導致缸內局部壓力異常升高的主要原因，其破壞性遠超磨損。當高溫積碳導致活塞環在環槽內受阻無法自由移動時，氣體流動通道被阻塞，致使環間壓力急劇上升。模擬數據顯示，膠著狀態下的氣體最大壓力從正常值的 5.27 MPa 激增至 11.92 MPa，這種劇烈的壓力波動和壓降增加是誘發氣缸套（Cylinder liner）失效的重要因素。該研究進行了缸內流場的可視化分析，為船用柴油機的故障診斷提供了初步的理論數據支撐。
+其次，活塞環膠著（Ring sticking）可能是導致缸內局部壓力異常升高的主要原因，其破壞性遠超磨損。當高溫積碳導致活塞環在環槽內受阻無法自由移動時，氣體流動通道被阻塞，致使環間壓力急劇上升。模擬數據顯示，膠著狀態下的氣體最大壓力從正常值的 5.27 MPa 激增至 11.92 MPa，這種劇烈的壓力波動和壓降增加是誘發氣缸套（Cylinder liner）失效的重要因素。該研究進行了缸內流場的可視化分析，為船用柴油引擎的故障診斷提供了初步的理論數據支撐。
 
 <p align="center">
   <img src="/assets/img/LuoNum/Fig4.png" alt="Results of piston ring sticking" width="100%">
