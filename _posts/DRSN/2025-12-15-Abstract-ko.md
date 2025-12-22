@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-15
 tags: [딥러닝, 고장 진단]
 mathjax: true
+description: "본 논문은 잡음이 심한 진동 신호로부터 특징(Feature) 학습 능력을 향상시키고 높은 고장 진단 정확도를 달성하기 위해, 새로운 딥러닝 기법인 Deep Residual Shrinkage Networks를 제안한다."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
