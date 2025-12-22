@@ -5,6 +5,7 @@ subtitle: "Fault Diagnosis کے لیے Deep Residual Shrinkage Networks"
 date: 2025-12-19
 tags: [Artificial Intelligence, Fault Diagnosis]
 mathjax: true
+description: "اس مضمون میں Deep Learning کے نئے طریقے وضع کیے گئے ہیں، جنہیں Deep Residual Shrinkage Networks کا نام دیا گیا ہے۔ ان کا مقصد انتہائی نوائز (noise) والے وائبریشن سگنلز (vibration signals) سے فیچر لرننگ (feature learning) کی صلاحیت کو بہتر بنانا اور فالٹ ڈائیگنوسس (fault diagnosis) میں اعلیٰ درستگی حاصل کرنا ہے۔"
 ---
 
 <!-- 1. 引入乌尔都语专业字体 (Noto Nastaliq Urdu) -->
