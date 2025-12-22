@@ -4,6 +4,7 @@ title: "Deep Residual Shrinkage Network: Highly Noisy Data खातीर ए�
 date: 2025-12-08
 tags: [Deep Learning, AI]
 mathjax: true
+description: "Deep Residual Shrinkage Network हें Deep Residual Network चें एक सुदारीत (improved) variant आसा. म्हळ्यारच, Deep Residual Shrinkage Network मदे Deep Residual Network, attention mechanisms, आनी soft thresholding functions हांचो आस्पाव (integration) आसा."
 ---
 
 **Deep Residual Shrinkage Network हें Deep Residual Network चें एक सुदारीत (improved) variant आसा. म्हळ्यारच, Deep Residual Shrinkage Network मदे Deep Residual Network, attention mechanisms, आनी soft thresholding functions हांचो आस्पाव (integration) आसा.**
