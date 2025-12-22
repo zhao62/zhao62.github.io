@@ -4,6 +4,7 @@ title: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-13
 tags: [Deep Learning, AI]
 mathjax: true
+description: "This article develops new deep learning methods, namely, deep residual shrinkage networks, to improve the feature learning ability from highly noised vibration signals and achieve a high fault diagnosing accuracy."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
