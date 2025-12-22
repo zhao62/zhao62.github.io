@@ -4,6 +4,7 @@ title: "Numerical simulation of piston rings in marine diesel engines considerin
 date: 2025-12-13
 tags: ["Marine Diesel Engine", "Fault Diagnosis"]
 mathjax: true
+description: "This paper presents a thermal-fluid-structure coupling simulation of a piston rings in a large marine diesel engine, focusing on the thermal parameter variations induced by its fault."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
