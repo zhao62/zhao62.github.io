@@ -5,6 +5,7 @@ subtitle: "An Artificial Intelligence Method for Highly Noisy Data"
 date: 2025-12-08
 tags: [Deep Learning, AI]
 mathjax: true
+description: "Deep Residual Shrinkage Network hem Deep Residual Network chem ek sudharit (improved) variant aasa. Mhanjech, Deep Residual Shrinkage Network madhe Deep Residual Network, attention mechanisms, ani soft thresholding functions hancho askar (integration) asta."
 ---
 
 **Deep Residual Shrinkage Network hem Deep Residual Network chem ek sudharit (improved) variant aasa. Mhanjech, Deep Residual Shrinkage Network madhe Deep Residual Network, attention mechanisms, ani soft thresholding functions hancho askar (integration) asta.**
