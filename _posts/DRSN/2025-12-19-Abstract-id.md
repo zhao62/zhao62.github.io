@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-19
 tags: [Kecerdasan Buatan, Diagnosis Kerusakan]
 mathjax: true
+description: "Artikel ini mengembangkan metode deep learning baru, yaitu Deep Residual Shrinkage Networks, untuk meningkatkan kemampuan pembelajaran fitur (feature learning) dari sinyal getaran yang memiliki tingkat noise tinggi, serta untuk mencapai akurasi diagnosis kerusakan yang tinggi."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
