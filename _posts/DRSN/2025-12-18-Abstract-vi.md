@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [Trí tuệ nhân tạo, Chẩn đoán lỗi]
 mathjax: true
+description: "Bài báo này phát triển các phương pháp học sâu (deep learning) mới, cụ thể là mạng Deep Residual Shrinkage Networks, nhằm nâng cao khả năng học đặc trưng từ các tín hiệu rung động bị nhiễu nặng, đồng thời đạt được độ chính xác cao trong chẩn đoán lỗi."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
