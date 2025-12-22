@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [Τεχνητή Νοημοσύνη, Διάγνωση Βλαβών]
 mathjax: true
+description: "Το παρόν άρθρο αναπτύσσει νέες μεθόδους βαθιάς μάθησης (deep learning), και συγκεκριμένα τα βαθιά υπολειπόμενα δίκτυα συρρίκνωσης (Deep Residual Shrinkage Networks), με στόχο τη βελτίωση της ικανότητας εκμάθησης χαρακτηριστικών από σήματα δονήσεων με υψηλό επίπεδο θορύβου, καθώς και την επίτευξη υψηλής ακρίβειας στη διάγνωση βλαβών."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
