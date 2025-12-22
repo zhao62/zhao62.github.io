@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [Tekoäly, vianmääritys]
 mathjax: true
+description: "Tässä artikkelissa kehitetään uusia syväoppimismenetelmiä, ns. Deep Residual Shrinkage Network (DRSN) -verkkoja. Menetelmän tavoitteena on parantaa piirteiden oppimiskykyä voimakkaasti kohinaisista värähtelysignaaleista ja saavuttaa korkea tarkkuus vianmäärityksessä."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
