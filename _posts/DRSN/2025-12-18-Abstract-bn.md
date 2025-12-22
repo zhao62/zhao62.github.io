@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [আর্টিফিশিয়াল ইন্টেলিজেন্স, ফল্ট ডায়াগনসিস]
 mathjax: true
+description: "রক্ষণশীল হিসাব অনুযায়ী, ১,০০০-এরও বেশি প্রকাশনায় Deep Residual Shrinkage Networks (DRSN) ব্যবহার করা হয়েছে। মেকানিক্যাল ইঞ্জিনিয়ারিং, ইলেকট্রিক পাওয়ার, কম্পিউটার ভিশন, স্বাস্থ্যসেবা (Healthcare), স্পিচ প্রসেসিং, টেক্সট অ্যানালাইসিস, রাডার এবং রিমোট সেন্সিং-সহ বিচিত্র সব ক্ষেত্রে গবেষকরা হয় সরাসরি এই নেটওয়ার্কটি প্রয়োগ করেছেন, নতুবা এর ওপর ভিত্তি করে আরও উন্নত সংস্করণ তৈরি করেছেন।"
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
