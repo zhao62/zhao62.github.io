@@ -4,6 +4,7 @@ title: "Deep transfer learning enabled online state-of-health estimation of lith
 date: 2025-12-20
 tags: ["SOH Estimation", "Lithium-ion Batteries", "Deep Transfer Learning", "Battery Degradation", "Cross-domain Generalization"]
 mathjax: true
+description: "State-of-health (SOH) estimation of lithium-ion batteries is crucial for ensuring efficient and safe operation. This paper proposes a self-attention-based deep transfer learning approach that can be flexibly updated in response to diverse cathode materials and varied operation conditions."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
