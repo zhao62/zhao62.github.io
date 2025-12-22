@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-13
 tags: [深度学习, 故障诊断]
 mathjax: true
+description: "本文提出了一种新的深度学习方法——深度残差收缩网络（Deep Residual Shrinkage Networks, DRSN），旨在提升在强噪声振动信号条件下的特征学习能力，实现较高的故障诊断准确率。"
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
