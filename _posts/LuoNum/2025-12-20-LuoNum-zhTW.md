@@ -5,6 +5,7 @@ subtitle: "Numerical simulation of piston rings in marine diesel engines conside
 date: 2025-12-20
 tags: ["故障診斷", "船用柴油引擎", "熱流固耦合分析"]
 mathjax: true
+description: "本論文針對活塞環、活塞及氣缸壁系統，建立了一個融合二維流體域與三維活塞環結構的耦合模型，並在考慮熱-流-固（Thermal-fluid-structure）多物理場因素的條件下進行了求解。"
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
