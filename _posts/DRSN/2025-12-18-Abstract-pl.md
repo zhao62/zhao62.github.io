@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [Sztuczna inteligencja, Diagnostyka uszkodzeń]
 mathjax: true
+description: "W niniejszym artykule opracowano nowe metody uczenia głębokiego (ang. deep learning), a mianowicie sieci typu Deep Residual Shrinkage Networks (DRSN), mające na celu poprawę zdolności uczenia się cech z silnie zaszumionych sygnałów drganiowych oraz osiągnięcie wysokiej dokładności w diagnostyce uszkodzeń."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
