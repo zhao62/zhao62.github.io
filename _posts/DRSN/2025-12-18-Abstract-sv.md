@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [Artificiell intelligens, feldiagnostik]
 mathjax: true
+description: "I denna artikel utvecklas nya metoder inom djupinlärning, närmare bestämt Deep Residual Shrinkage Networks, för att förbättra förmågan till särdragsinlärning (feature learning) från vibrationssignaler med hög brusnivå och därmed uppnå hög precision vid feldiagnostik."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
