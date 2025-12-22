@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [искусственный интеллект, диагностика неисправностей]
 mathjax: true
+description: "В данной статье представлены новые методы глубокого обучения, а именно глубокие остаточные сети сжатия (Deep Residual Shrinkage Networks), разработанные для улучшения способности выделения признаков из сильно зашумленных вибрационных сигналов и достижения высокой точности диагностики неисправностей."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
