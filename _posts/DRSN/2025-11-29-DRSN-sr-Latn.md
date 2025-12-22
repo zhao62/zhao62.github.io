@@ -4,6 +4,7 @@ title: "Deep Residual Shrinkage Networks: Metoda veštačke inteligencije za pod
 date: 2025-11-29
 tags: [Deep Learning, AI]
 mathjax: true
+description: "Deep Residual Shrinkage Networks (DRSN) je unapređena varijanta dubokih rezidualnih mreža (ResNet). U suštini, to je integracija ResNet-a, mehanizama pažnje (attention mechanisms) i funkcija mekog pragovanja (soft thresholding)."
 ---
 
 **Deep Residual Shrinkage Networks (DRSN) je unapređena varijanta dubokih rezidualnih mreža (ResNet). U suštini, to je integracija ResNet-a, mehanizama pažnje (attention mechanisms) i funkcija mekog pragovanja (soft thresholding).**
