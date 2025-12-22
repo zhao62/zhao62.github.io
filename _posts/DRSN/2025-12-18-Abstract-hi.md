@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [आर्टिफिशियल इंटेलिजेंस, फॉल्ट डायग्नोसिस]
 mathjax: true
+description: "यह लेख अत्यधिक शोर (noise) वाले वाइब्रेशन सिग्नल्स (vibration signals) से फीचर लर्निंग (feature learning) की क्षमता को बेहतर बनाने और उच्च फॉल्ट डायग्नोसिस एक्यूरेसी (accuracy) प्राप्त करने के लिए 'Deep Residual Shrinkage Networks' नामक नई डीप लर्निंग विधियां विकसित करता है। महत्वहीन फीचर्स को हटाने के लिए डीप आर्किटेक्चर (deep architectures) में 'नॉन-लीनियर ट्रांसफॉर्मेशन लेयर्स' (nonlinear transformation layers) के रूप में 'सॉफ्ट थ्रेशोल्डिंग' (Soft thresholding) को शामिल किया गया है।"
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
