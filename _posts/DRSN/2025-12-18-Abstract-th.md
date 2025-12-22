@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [ปัญญาประดิษฐ์, การวินิจฉัยความผิดปกติ]
 mathjax: true
+description: "บทความวิจัยนี้ได้พัฒนาวิธีการเรียนรู้เชิงลึก (Deep Learning) รูปแบบใหม่ที่เรียกว่า "Deep Residual Shrinkage Networks" เพื่อยกระดับความสามารถในการเรียนรู้คุณลักษณะ (Feature Learning) จากสัญญาณการสั่นสะเทือนที่มีสัญญาณรบกวนสูง และเพื่อให้ได้ความแม่นยำในการวินิจฉัยความผิดปกติในระดับสูง"
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
