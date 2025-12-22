@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [Inteligência Artificial, Diagnóstico de Falhas]
 mathjax: true
+description: "Este artigo desenvolve novos métodos de deep learning, especificamente as Deep Residual Shrinkage Networks (Redes Residuais Profundas de Contração), para aprimorar a capacidade de aprendizado de características (feature learning) a partir de sinais de vibração altamente ruidosos e alcançar uma elevada precisão no diagnóstico de falhas."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
