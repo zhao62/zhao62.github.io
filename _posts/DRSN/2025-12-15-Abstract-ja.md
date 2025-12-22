@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-15
 tags: [ディープラーニング (Deep Learning), 故障診断]
 mathjax: true
+description: "本論文では、高ノイズの振動信号からの特徴学習能力を向上させ、高い故障診断精度を実現するために、新たなディープラーニング手法である「Deep Residual Shrinkage Networks (DRSN)」を提案する。"
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
