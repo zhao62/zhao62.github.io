@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [Artificial Intelligence, Fault Diagnosis]
 mathjax: true
+description: "அதிக இரைச்சல் கொண்ட (highly noised) அதிர்வு சிக்னல்களிலிருந்து (vibration signals) தகவல்களைப் பிரித்தெடுக்கும் திறனை மேம்படுத்தவும், மிகத் துல்லியமாக இயந்திரக் கோளாறுகளைக் கண்டறியவும், இந்த ஆய்வுக் கட்டுரையில் Deep Residual Shrinkage Networks எனப்படும் புதிய Deep Learning முறைகள் உருவாக்கப்பட்டுள்ளன."
 ---
 
 <!-- 在这里粘贴字体设置代码 -->
