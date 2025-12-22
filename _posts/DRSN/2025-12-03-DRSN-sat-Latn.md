@@ -4,6 +4,7 @@ title: "Deep Residual Shrinkage Network: Highly Noisy Data lagit' mit'tan Artifi
 date: 2025-12-03
 tags: [Deep Learning, AI]
 mathjax: true
+description: "Deep Residual Shrinkage Network do Deep Residual Network reak' mit'tan improved variant kana. Asol re, noa do Deep Residual Network, attention mechanisms, ar soft thresholding functions reak' integration kana."
 ---
 
 **Deep Residual Shrinkage Network do Deep Residual Network reak' mit'tan improved variant kana. Asol re, noa do Deep Residual Network, attention mechanisms, ar soft thresholding functions reak' integration kana.**
