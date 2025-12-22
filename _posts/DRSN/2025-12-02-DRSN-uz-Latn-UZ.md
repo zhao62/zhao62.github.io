@@ -4,6 +4,7 @@ title: "Deep Residual Shrinkage Network: Kuchli shovqinli ma'lumotlar uchun sun'
 date: 2025-12-02
 tags: [Deep Learning, AI]
 mathjax: true
+description: "Deep Residual Shrinkage Network (DRSN) – bu Deep Residual Network (ResNet) ning takomillashtirilgan variantidir. Aslida, u Deep Residual Network, Attention mexanizmlari va Soft Thresholding funksiyalarining integratsiyasidir."
 ---
 
 **Deep Residual Shrinkage Network (DRSN) – bu Deep Residual Network (ResNet) ning takomillashtirilgan variantidir. Aslida, u Deep Residual Network, Attention mexanizmlari va Soft Thresholding funksiyalarining integratsiyasidir.**
