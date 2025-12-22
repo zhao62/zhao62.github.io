@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [Artificial Intelligence, Fault Diagnosis]
 mathjax: true
+description: "తీవ్రమైన నాయిస్ (noise) ఉన్న వైబ్రేషన్ సిగ్నల్స్ నుండి ఫీచర్లను నేర్చుకునే సామర్థ్యాన్ని మెరుగుపరచడానికి మరియు అత్యంత కచ్చితత్వంతో లోపాలను గుర్తించడానికి (high accuracy), ఈ వ్యాసం "Deep Residual Shrinkage Networks" అనే కొత్త డీప్ లెర్నింగ్ పద్ధతులను అభివృద్ధి చేసింది."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
