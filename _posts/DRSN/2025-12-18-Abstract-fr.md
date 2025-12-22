@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [intelligence artificielle, diagnostic de panne]
 mathjax: true
+description: "Cet article présente de nouvelles méthodes d'apprentissage profond, baptisées Deep Residual Shrinkage Networks (réseaux résiduels profonds à seuillage), visant à améliorer la capacité d'apprentissage de caractéristiques (feature learning) à partir de signaux vibratoires fortement bruités et à atteindre une grande précision dans le diagnostic de défauts."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
