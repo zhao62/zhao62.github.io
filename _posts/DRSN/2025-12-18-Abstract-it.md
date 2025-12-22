@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [Intelligenza Artificiale, Diagnosi dei guasti]
 mathjax: true
+description: "In questo articolo vengono presentati nuovi metodi di deep learning, denominati Deep Residual Shrinkage Networks (DRSN), sviluppati per migliorare la capacità di apprendimento delle feature da segnali di vibrazione affetti da forte rumore e per conseguire un'elevata accuratezza nella diagnosi dei guasti."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
