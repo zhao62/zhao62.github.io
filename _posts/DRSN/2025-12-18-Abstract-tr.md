@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-18
 tags: [Yapay Zeka, Arıza Teşhisi]
 mathjax: true
+description: "Bu çalışmada, yoğun gürültü içeren titreşim sinyallerinden öznitelik öğrenme kabiliyetini geliştirmek ve yüksek arıza teşhis doğruluğuna ulaşmak amacıyla, derin artık büzülme ağları (Deep Residual Shrinkage Networks) adı verilen yeni derin öğrenme yöntemleri geliştirilmiştir."
 ---
 
 <p align="center" style="color: gray; font-style: italic;">
