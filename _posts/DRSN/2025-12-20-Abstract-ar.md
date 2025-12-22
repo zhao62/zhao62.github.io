@@ -5,6 +5,7 @@ subtitle: "Deep Residual Shrinkage Networks for Fault Diagnosis"
 date: 2025-12-20
 tags: [Artificial Intelligence, Fault Diagnosis]
 mathjax: true
+description: "تتناول هذه المقالة تطوير طرق جديدة في التعلم العميق (Deep Learning)، وتحديداً شبكات الانكماش المتبقية العميقة (Deep Residual Shrinkage Networks)، بهدف تحسين القدرة على تعلم السمات (feature learning) من إشارات الاهتزاز المشوبة بضوضاء عالية، وتحقيق دقة فائقة في تشخيص الأعطال (fault diagnosis)."
 ---
 
 <!-- 1. 引入谷歌字体 (Noto Naskh Arabic) -->
