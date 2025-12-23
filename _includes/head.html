@@ -197,7 +197,7 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "ScholarlyArticle",
+    "@type": "TechArticle",
     "headline": "{{ page.title | strip_html | xml_escape }}",
     "image": [
       "{{ page.share-img | absolute_url | default: site.avatar | absolute_url }}"
@@ -206,10 +206,18 @@
     "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
     "author": {
       "@type": "Person",
-      "name": "{{ page.author | default: site.author }}"
+      "name": "{{ page.author | default: site.author }}",
+      "url": "{{ site.url }}"
     },
     "description": "{{ page.description | strip_html | xml_escape }}",
-    "inLanguage": "{{ page.lang }}"
+    "inLanguage": "{{ page.lang }}",
+    "proficiencyLevel": "Expert",
+    "genre": "Artificial Intelligence",
+    "keywords": "{{ page.tags | join: ', ' }}",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "{{ page.url | absolute_url }}"
+    }
   }
   </script>
   <!-- ================== Schema.org JSON-LD End ================== -->
