@@ -122,19 +122,63 @@
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
 
-  <!-- 新增：Open Graph Locale -->
+  <!-- ================== Open Graph Locale (针对你的25种语言) ================== -->
   {% case page.lang %}
     {% when 'zh' %}
-      <meta property="og:locale" content="zh_CN">
+      <meta property="og:locale" content="zh_CN"> <!-- 简体中文 (中国大陆) -->
     {% when 'zh-Hant' %}
-      <meta property="og:locale" content="zh_TW">
+      <meta property="og:locale" content="zh_TW"> <!-- 繁体中文 (台湾) -->
     {% when 'en' %}
-      <meta property="og:locale" content="en_US">
+      <meta property="og:locale" content="en_US"> <!-- 英语 (美国) -->
+    {% when 'ja' %}
+      <meta property="og:locale" content="ja_JP"> <!-- 日语 (日本) -->
+    {% when 'ko' %}
+      <meta property="og:locale" content="ko_KR"> <!-- 韩语 (韩国) -->
+    {% when 'fr' %}
+      <meta property="og:locale" content="fr_FR"> <!-- 法语 (法国) -->
+    {% when 'de' %}
+      <meta property="og:locale" content="de_DE"> <!-- 德语 (德国) -->
+    {% when 'es' %}
+      <meta property="og:locale" content="es_ES"> <!-- 西班牙语 (西班牙) -->
+    {% when 'ru' %}
+      <meta property="og:locale" content="ru_RU"> <!-- 俄语 (俄罗斯) -->
+    {% when 'tr' %}
+      <meta property="og:locale" content="tr_TR"> <!-- 土耳其语 (土耳其) -->
+    {% when 'ar' %}
+      <meta property="og:locale" content="ar_AR"> <!-- 阿拉伯语 (通用) -->
+    {% when 'he' %}
+      <meta property="og:locale" content="he_IL"> <!-- 希伯来语 (以色列) -->
+    {% when 'fa' %}
+      <meta property="og:locale" content="fa_IR"> <!-- 波斯语 (伊朗) -->
+    {% when 'it' %}
+      <meta property="og:locale" content="it_IT"> <!-- 意大利语 (意大利) -->
+    {% when 'pt' %}
+      <meta property="og:locale" content="pt_PT"> <!-- 葡萄牙语 (葡萄牙) -->
+    {% when 'nl' %}
+      <meta property="og:locale" content="nl_NL"> <!-- 荷兰语 (荷兰) -->
+    {% when 'pl' %}
+      <meta property="og:locale" content="pl_PL"> <!-- 波兰语 (波兰) -->
+    {% when 'vi' %}
+      <meta property="og:locale" content="vi_VN"> <!-- 越南语 (越南) -->
+    {% when 'th' %}
+      <meta property="og:locale" content="th_TH"> <!-- 泰语 (泰国) -->
+    {% when 'id' %}
+      <meta property="og:locale" content="id_ID"> <!-- 印尼语 (印尼) -->
+    {% when 'hi' %}
+      <meta property="og:locale" content="hi_IN"> <!-- 印地语 (印度) -->
+    {% when 'sv' %}
+      <meta property="og:locale" content="sv_SE"> <!-- 瑞典语 (瑞典) -->
+    {% when 'cs' %}
+      <meta property="og:locale" content="cs_CZ"> <!-- 捷克语 (捷克) -->
+    {% when 'ro' %}
+      <meta property="og:locale" content="ro_RO"> <!-- 罗马尼亚语 (罗马尼亚) -->
+    {% when 'uk' %}
+      <meta property="og:locale" content="uk_UA"> <!-- 乌克兰语 (乌克兰) - 注意不要和英国(UK)混淆 -->
     {% else %}
+      <!-- 默认情况：如果未来加了新语言忘记配置，直接使用语言代码作为兜底 -->
       <meta property="og:locale" content="{{ page.lang }}">
   {% endcase %}
-  
-  <!-- 如果有替代语言，也可以列出 og:locale:alternate，但通常 hreflang 够用了 -->
+  <!-- ================== Open Graph Locale End ================== -->
 
   {% if img != "" %}
   <meta property="og:image" content="{{ img | absolute_url }}">
