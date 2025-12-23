@@ -40,17 +40,25 @@ layout: base
       {% endif %}
 
       <div class="blog-post">
-        <!-- ================== Universal Language Switcher Start ================== -->
+        <!-- ================== Optimized Language Switcher Start ================== -->
         {% if page.ref %}
-        <div style="margin: 20px 0; border-bottom: 1px solid #eee; padding-bottom: 10px;">
-          <details style="cursor: pointer; position: relative;">
+        <div style="margin: 10px 0 30px 0; display: flex; justify-content: flex-end;">
+          <details style="position: relative; display: inline-block; z-index: 999;">
             
-            <!-- 按钮部分：根据当前页面语言显示对应的母语名称 -->
-            <summary style="list-style: none; font-weight: bold; color: #555; display: inline-flex; align-items: center;">
-              <span style="background: #f0f0f0; padding: 5px 12px; border-radius: 20px; font-size: 14px; transition: 0.3s; user-select: none;">
-                <i class="fas fa-globe" style="margin-right: 5px;"></i> 
-                
-                <!-- 核心修改：显示当前语言名称 -->
+            <!-- 按钮主体 -->
+            <summary style="list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; 
+                            padding: 8px 16px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 50px; 
+                            color: #444; font-size: 14px; font-weight: 600; transition: all 0.2s ease;">
+              <!-- 1. 国际通用翻译图标 (文A) -->
+              <i class="fas fa-language" style="font-size: 20px; color: #007bff;"></i>
+              
+              <!-- 2. 固定显示 English单词 'Language' (作为通用指引) -->
+              <span style="color: #007bff;">Language</span>
+              
+              <span style="color: #ccc;">|</span>
+              
+              <!-- 3. 显示当前语言名称 (让本地人确认) -->
+              <span>
                 {% case page.lang %}
                      {% when 'zh' %} 简体中文
                      {% when 'zh-Hant' %} 繁體中文
@@ -77,25 +85,34 @@ layout: base
                      {% when 'cs' %} Čeština
                      {% when 'ro' %} Română
                      {% when 'uk' %} Українська
-                     {% else %} Language
+                     {% else %} Select
                 {% endcase %}
-                
-                <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i>
               </span>
+              
+              <!-- 下拉箭头 -->
+              <i class="fas fa-chevron-down" style="font-size: 10px; opacity: 0.6; margin-left: 4px;"></i>
             </summary>
             
-            <!-- 展开后的列表 (保持不变) -->
-            <div style="margin-top: 10px; display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; background: #fff; padding: 15px; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 100;">
+            <!-- 下拉菜单 (绝对定位，确保覆盖在正文上方) -->
+            <div style="position: absolute; top: 110%; right: 0; width: 280px; max-height: 400px; overflow-y: auto;
+                        background: #ffffff; border: 1px solid #eee; border-radius: 12px; 
+                        box-shadow: 0 10px 25px rgba(0,0,0,0.1); padding: 10px; display: grid; 
+                        grid-template-columns: repeat(2, 1fr); gap: 5px;">
+              
               {% assign posts = site.posts | where: "ref", page.ref | sort: 'lang' %}
               {% for post in posts %}
                 <a href="{{ site.url }}{{ post.url }}" 
-                   style="text-decoration: none; text-align: center; padding: 6px; border-radius: 4px; font-size: 13px; display: block;
+                   style="display: flex; align-items: center; justify-content: center; text-decoration: none; 
+                          padding: 8px 5px; border-radius: 6px; font-size: 13px; color: #555; transition: background 0.2s;
                    {% if post.lang == page.lang %}
-                      background-color: #007bff; color: white; font-weight: bold;
+                      background-color: #e7f1ff; color: #007bff; font-weight: bold; border: 1px solid #b3d7ff;
                    {% else %}
-                      background-color: #f8f9fa; color: #333;
-                   {% endif %}">
-                   <!-- 列表项内容 (保持不变) -->
+                      background-color: transparent; border: 1px solid transparent;
+                   {% endif %}
+                   "
+                   onmouseover="this.style.backgroundColor='#f8f9fa'"
+                   onmouseout="this.style.backgroundColor='{% if post.lang == page.lang %}#e7f1ff{% else %}transparent{% endif %}'">
+                   
                    {% case post.lang %}
                      {% when 'zh' %} 简体中文
                      {% when 'zh-Hant' %} 繁體中文
@@ -130,7 +147,7 @@ layout: base
           </details>
         </div>
         {% endif %}
-        <!-- ================== Universal Language Switcher End ================== -->
+        <!-- ================== Optimized Language Switcher End ================== -->
         {{ content }}
       </div>
 
