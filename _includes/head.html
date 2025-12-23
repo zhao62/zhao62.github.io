@@ -122,6 +122,20 @@
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description }}">
 
+  <!-- 新增：Open Graph Locale -->
+  {% case page.lang %}
+    {% when 'zh' %}
+      <meta property="og:locale" content="zh_CN">
+    {% when 'zh-Hant' %}
+      <meta property="og:locale" content="zh_TW">
+    {% when 'en' %}
+      <meta property="og:locale" content="en_US">
+    {% else %}
+      <meta property="og:locale" content="{{ page.lang }}">
+  {% endcase %}
+  
+  <!-- 如果有替代语言，也可以列出 og:locale:alternate，但通常 hreflang 够用了 -->
+
   {% if img != "" %}
   <meta property="og:image" content="{{ img | absolute_url }}">
   {% endif %}
