@@ -40,21 +40,52 @@ layout: base
       {% endif %}
 
       <div class="blog-post">
-        <!-- ================== Collapsible Language Switcher Start ================== -->
+        <!-- ================== Universal Language Switcher Start ================== -->
         {% if page.ref %}
         <div style="margin: 20px 0; border-bottom: 1px solid #eee; padding-bottom: 10px;">
           <details style="cursor: pointer; position: relative;">
-            <!-- 按钮部分 -->
+            
+            <!-- 按钮部分：根据当前页面语言显示对应的母语名称 -->
             <summary style="list-style: none; font-weight: bold; color: #555; display: inline-flex; align-items: center;">
               <span style="background: #f0f0f0; padding: 5px 12px; border-radius: 20px; font-size: 14px; transition: 0.3s; user-select: none;">
                 <i class="fas fa-globe" style="margin-right: 5px;"></i> 
-                Language / 语言 ({{ site.posts | where: "ref", page.ref | size }}) 
+                
+                <!-- 核心修改：显示当前语言名称 -->
+                {% case page.lang %}
+                     {% when 'zh' %} 简体中文
+                     {% when 'zh-Hant' %} 繁體中文
+                     {% when 'en' %} English
+                     {% when 'ja' %} 日本語
+                     {% when 'ko' %} 한국어
+                     {% when 'fr' %} Français
+                     {% when 'de' %} Deutsch
+                     {% when 'es' %} Español
+                     {% when 'ru' %} Русский
+                     {% when 'tr' %} Türkçe
+                     {% when 'ar' %} العربية
+                     {% when 'he' %} עברית
+                     {% when 'fa' %} فارسی
+                     {% when 'it' %} Italiano
+                     {% when 'pt' %} Português
+                     {% when 'nl' %} Nederlands
+                     {% when 'pl' %} Polski
+                     {% when 'vi' %} Tiếng Việt
+                     {% when 'th' %} ไทย
+                     {% when 'id' %} Indonesia
+                     {% when 'hi' %} हिन्दी
+                     {% when 'sv' %} Svenska
+                     {% when 'cs' %} Čeština
+                     {% when 'ro' %} Română
+                     {% when 'uk' %} Українська
+                     {% else %} Language
+                {% endcase %}
+                
                 <i class="fas fa-chevron-down" style="font-size: 10px; margin-left: 5px;"></i>
               </span>
             </summary>
             
-            <!-- 展开后的网格列表 -->
-            <div style="margin-top: 10px; display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; background: #fff; padding: 15px; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+            <!-- 展开后的列表 (保持不变) -->
+            <div style="margin-top: 10px; display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; background: #fff; padding: 15px; border: 1px solid #eee; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); z-index: 100;">
               {% assign posts = site.posts | where: "ref", page.ref | sort: 'lang' %}
               {% for post in posts %}
                 <a href="{{ site.url }}{{ post.url }}" 
@@ -64,7 +95,7 @@ layout: base
                    {% else %}
                       background-color: #f8f9fa; color: #333;
                    {% endif %}">
-                   <!-- 纯文字版语言列表 -->
+                   <!-- 列表项内容 (保持不变) -->
                    {% case post.lang %}
                      {% when 'zh' %} 简体中文
                      {% when 'zh-Hant' %} 繁體中文
@@ -99,7 +130,7 @@ layout: base
           </details>
         </div>
         {% endif %}
-        <!-- ================== Collapsible Language Switcher End ================== -->
+        <!-- ================== Universal Language Switcher End ================== -->
         {{ content }}
       </div>
 
