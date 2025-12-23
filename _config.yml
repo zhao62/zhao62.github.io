@@ -5,7 +5,7 @@ author: Zhao62
 gtag: "G-4396ZM3K03"
 
 # 这会让 URL 自动包含文件夹名称（即语言代码），变成 /zh/2025/...
-permalink: /:categories/:year/:month/:day/:title/
+permalink: "/:categories/:year/:month/:day/:title/"
 
 # 启用 Beautiful Jekyll 主题
 remote_theme: daattali/beautiful-jekyll
