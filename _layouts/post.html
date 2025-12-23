@@ -42,22 +42,55 @@ layout: base
       <div class="blog-post">
         <!-- ================== Optimized Language Switcher Start ================== -->
         {% if page.ref %}
-        <div style="margin: 10px 0 30px 0; display: flex; justify-content: flex-end;">
-          <details style="position: relative; display: inline-block; z-index: 999;">
+        
+        <!-- 嵌入式 CSS：专门处理移动端适配 -->
+        <style>
+          /* 默认样式 (电脑端) */
+          .lang-dropdown-menu {
+            position: absolute;
+            top: 120%; /* 稍微拉开一点距离 */
+            right: 0;
+            width: 320px; /* 稍微加宽，容纳长单词语言 */
+            max-width: 90vw; /* 关键：移动端最大宽度不超过屏幕的90% */
+            max-height: 400px;
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch; /* iOS 惯性滚动 */
+            background: #ffffff;
+            border: 1px solid #eee;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.15); /* 加深阴影提升层次感 */
+            padding: 10px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 默认双列 */
+            gap: 6px;
+            z-index: 9999; /* 确保在最上层，盖过图片和导航 */
+          }
+          
+          /* 移动端适配 (屏幕宽度小于 480px 时) */
+          @media (max-width: 480px) {
+            .lang-dropdown-menu {
+              width: 300px;
+              grid-template-columns: 1fr; /* 手机上改为单列，防止文字截断 */
+            }
+            .lang-dropdown-item {
+              padding: 10px !important; /* 增加手指点击区域 */
+              font-size: 15px !important; /* 字体稍微调大 */
+            }
+          }
+        </style>
+
+        <div style="margin: 10px 0 30px 0; display: flex; justify-content: flex-end; position: relative;">
+          <!-- 添加 position: relative 到外层 div，确保 absolute 定位准确 -->
+          
+          <details style="position: relative; display: inline-block; z-index: 1000;">
             
             <!-- 按钮主体 -->
             <summary style="list-style: none; cursor: pointer; display: flex; align-items: center; gap: 6px; 
                             padding: 8px 16px; background: #f8f9fa; border: 1px solid #e9ecef; border-radius: 50px; 
-                            color: #444; font-size: 14px; font-weight: 600; transition: all 0.2s ease;">
-              <!-- 1. 国际通用翻译图标 (文A) -->
+                            color: #444; font-size: 14px; font-weight: 600; transition: all 0.2s ease; outline: none;">
               <i class="fas fa-language" style="font-size: 20px; color: #007bff;"></i>
-              
-              <!-- 2. 固定显示 English单词 'Language' (作为通用指引) -->
               <span style="color: #007bff;">Language</span>
-              
               <span style="color: #ccc;">|</span>
-              
-              <!-- 3. 显示当前语言名称 (让本地人确认) -->
               <span>
                 {% case page.lang %}
                      {% when 'zh' %} 简体中文
@@ -88,20 +121,16 @@ layout: base
                      {% else %} Select
                 {% endcase %}
               </span>
-              
-              <!-- 下拉箭头 -->
               <i class="fas fa-chevron-down" style="font-size: 10px; opacity: 0.6; margin-left: 4px;"></i>
             </summary>
             
-            <!-- 下拉菜单 (绝对定位，确保覆盖在正文上方) -->
-            <div style="position: absolute; top: 110%; right: 0; width: 280px; max-height: 400px; overflow-y: auto;
-                        background: #ffffff; border: 1px solid #eee; border-radius: 12px; 
-                        box-shadow: 0 10px 25px rgba(0,0,0,0.1); padding: 10px; display: grid; 
-                        grid-template-columns: repeat(2, 1fr); gap: 5px;">
+            <!-- 下拉菜单 (应用了上面的 CSS 类) -->
+            <div class="lang-dropdown-menu">
               
               {% assign posts = site.posts | where: "ref", page.ref | sort: 'lang' %}
               {% for post in posts %}
                 <a href="{{ site.url }}{{ post.url }}" 
+                   class="lang-dropdown-item"
                    style="display: flex; align-items: center; justify-content: center; text-decoration: none; 
                           padding: 8px 5px; border-radius: 6px; font-size: 13px; color: #555; transition: background 0.2s;
                    {% if post.lang == page.lang %}
@@ -144,6 +173,10 @@ layout: base
                 </a>
               {% endfor %}
             </div>
+            
+            <!-- 点击外部关闭遮罩 (可选，提升体验) -->
+            <div onclick="this.parentNode.removeAttribute('open')" 
+                 style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 9998; display: none;"></div>
           </details>
         </div>
         {% endif %}
