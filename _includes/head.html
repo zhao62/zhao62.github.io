@@ -172,18 +172,25 @@
     {% endfor %}
   {% endif %}
 
-</head>
-
-<!-- ================== Auto Hreflang Start ================== -->
-{% if page.ref %}
-  {% assign languages = site.posts | where: "ref", page.ref %}
-  {% for post in languages %}
-    <link rel="alternate" hreflang="{{ post.lang }}" href="{{ site.url }}{{ post.url }}" />
-  {% endfor %}
-  
-  {% assign default_post = languages | where: "lang", "en" | first %}
-  {% if default_post %}
-    <link rel="alternate" hreflang="x-default" href="{{ site.url }}{{ default_post.url }}" />
+  <!-- ================== 修复后的 Auto Hreflang (必须在 head 内部) ================== -->
+  {% if page.ref %}
+    <!-- 获取所有具有相同 ref 编号的文章 -->
+    {% assign languages = site.posts | where: "ref", page.ref %}
+    
+    {% for post in languages %}
+      <!-- 
+         1. hreflang: 告诉谷歌这篇文章是给哪个语言用户看的
+         2. href: 使用 absolute_url 确保生成 https://... 的完整路径
+      -->
+      <link rel="alternate" hreflang="{{ post.lang }}" href="{{ post.url | absolute_url }}" />
+    {% endfor %}
+    
+    <!-- 设置默认语言版本 (通常设为英语)，当用户语言不在列表时显示此版本 -->
+    {% assign default_post = languages | where: "lang", "en" | first %}
+    {% if default_post %}
+      <link rel="alternate" hreflang="x-default" href="{{ default_post.url | absolute_url }}" />
+    {% endif %}
   {% endif %}
-{% endif %}
-<!-- ================== Auto Hreflang End ================== -->
+  <!-- ================== Auto Hreflang End ================== -->
+
+</head>
