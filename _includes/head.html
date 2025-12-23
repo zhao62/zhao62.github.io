@@ -193,4 +193,25 @@
   {% endif %}
   <!-- ================== Auto Hreflang End ================== -->
 
+  <!-- ================== Schema.org JSON-LD Start ================== -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "{{ page.title | strip_html | xml_escape }}",
+    "image": [
+      "{{ page.share-img | absolute_url | default: site.avatar | absolute_url }}"
+     ],
+    "datePublished": "{{ page.date | date_to_xmlschema }}",
+    "dateModified": "{{ page.last_modified_at | default: page.date | date_to_xmlschema }}",
+    "author": {
+      "@type": "Person",
+      "name": "{{ page.author | default: site.author }}"
+    },
+    "description": "{{ page.description | strip_html | xml_escape }}",
+    "inLanguage": "{{ page.lang }}"
+  }
+  </script>
+  <!-- ================== Schema.org JSON-LD End ================== -->
+  
 </head>
