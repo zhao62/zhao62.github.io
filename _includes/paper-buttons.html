@@ -1,59 +1,90 @@
-<!-- 样式部分 -->
+<!-- 样式部分 (CSS) -->
 <style>
+  /* --- 容器样式保持不变 --- */
   .meta-container { text-align: center; margin-top: 15px; margin-bottom: 25px; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
   .meta-flex-wrapper { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; }
-  .meta-btn { text-decoration: none !important; color: white !important; font-size: 13px; padding: 5px 12px; border-radius: 6px; font-weight: 500; display: inline-flex; align-items: center; justify-content: center; transition: all 0.2s ease; border: 0; line-height: 1.2; margin: 0; opacity: 0.95; white-space: nowrap; }
-  .meta-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); opacity: 1; }
-  .btn-icon { margin-right: 5px; font-size: 1.1em; }
   
-  /* 配色 */
-  .btn-hit { background: linear-gradient(135deg, #3f51b5, #3949ab); }
-  .btn-scholar { background: linear-gradient(135deg, #5c7cfa, #4c6ef5); }
-  .btn-ieee { background: linear-gradient(135deg, #26a69a, #00897b); }
-  .btn-github { background: linear-gradient(135deg, #455a64, #37474f); }
-  .btn-citations { background: linear-gradient(135deg, #fbc02d, #f9a825); font-weight: 600; }
+  /* --- 按钮通用基础样式 --- */
+  .meta-btn {
+    text-decoration: none !important;
+    color: white !important;
+    font-size: 13px;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    border: 0;
+    line-height: 1.2;
+    margin: 0;
+    opacity: 0.95;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .meta-btn:hover { transform: translateY(-2px); box-shadow: 0 4px 8px rgba(0,0,0,0.15); opacity: 1; }
+  .btn-icon-span { margin-right: 5px; font-size: 1.1em; }
 
-  /* 移动端适配 */
+  /* --- 移动端适配 --- */
   @media (max-width: 600px) {
     .meta-flex-wrapper { gap: 6px; padding: 0 5px; }
     .meta-btn { width: auto !important; font-size: 11px; padding: 4px 8px; border-radius: 4px; }
-    .btn-icon { margin-right: 3px; font-size: 1.0em; }
   }
+
+  /* =========================================
+     核心部分：通过 CSS 类名控制颜色
+     以后想加新按钮，只需要在这里加一行颜色即可
+     ========================================= */
+  .btn-hit      { background: linear-gradient(135deg, #3f51b5, #3949ab); } /* 蓝色 */
+  .btn-scholar  { background: linear-gradient(135deg, #5c7cfa, #4c6ef5); } /* 浅蓝 */
+  .btn-ieee     { background: linear-gradient(135deg, #26a69a, #00897b); } /* 青色 */
+  .btn-github   { background: linear-gradient(135deg, #455a64, #37474f); } /* 深灰 */
+  .btn-citation { background: linear-gradient(135deg, #fbc02d, #f9a825); font-weight: 600; } /* 黄色 */
+  
+  /* 新增类型的例子 */
+  .btn-youtube  { background: linear-gradient(135deg, #ff0000, #cc0000); } /* 红色 */
+  .btn-pdf      { background: linear-gradient(135deg, #e53935, #c62828); } /* 深红 */
+  .btn-link     { background: linear-gradient(135deg, #8e24aa, #7b1fa2); } /* 紫色 (默认) */
 </style>
 
-<!-- 按钮结构部分 -->
 <div class="meta-container">
   <div class="meta-flex-wrapper">
     
-    {% if page.paper_meta.hit %}
-    <a href="{{ page.paper_meta.hit }}" target="_blank" class="meta-btn btn-hit">
-      <span class="btn-icon">🏠</span> HIT Homepage
-    </a>
-    {% endif %}
+    <!-- 循环遍历文章 Front Matter 中的 buttons 数组 -->
+    {% for btn in page.buttons %}
+      
+      <!-- 1. 确定样式类名：如果没有定义 type，默认使用 btn-link -->
+      {% assign btn_class = "btn-link" %}
+      {% if btn.type %}
+        {% assign btn_class = "btn-" | append: btn.type %}
+      {% endif %}
 
-    {% if page.paper_meta.scholar %}
-    <a href="{{ page.paper_meta.scholar }}" target="_blank" class="meta-btn btn-scholar">
-      <span class="btn-icon">🎓</span> Google Scholar
-    </a>
-    {% endif %}
+      <!-- 2. 确定图标：根据 type 自动匹配图标，方便维护 -->
+      {% assign icon = "🔗" %} <!-- 默认图标 -->
+      
+      {% case btn.type %}
+        {% when 'hit' %}      {% assign icon = "🏠" %}
+        {% when 'scholar' %}  {% assign icon = "🎓" %}
+        {% when 'ieee' %}     {% assign icon = "📄" %}
+        {% when 'github' %}   {% assign icon = "💻" %}
+        {% when 'citation' %} {% assign icon = "⭐" %}
+        {% when 'youtube' %}  {% assign icon = "▶️" %}
+        {% when 'pdf' %}      {% assign icon = "⬇️" %}
+      {% endcase %}
 
-    {% if page.paper_meta.ieee %}
-    <a href="{{ page.paper_meta.ieee }}" target="_blank" class="meta-btn btn-ieee">
-      <span class="btn-icon">📄</span> IEEE Paper
-    </a>
-    {% endif %}
+      <!-- 允许在 Front Matter 里覆盖图标 -->
+      {% if btn.icon %}
+        {% assign icon = btn.icon %}
+      {% endif %}
 
-    {% if page.paper_meta.github %}
-    <a href="{{ page.paper_meta.github }}" target="_blank" class="meta-btn btn-github">
-      <span class="btn-icon">💻</span> GitHub Code
-    </a>
-    {% endif %}
+      <!-- 3. 生成按钮 HTML -->
+      <a href="{{ btn.url }}" target="_blank" class="meta-btn {{ btn_class }}">
+        <span class="btn-icon-span">{{ icon }}</span>
+        {{ btn.text }}
+      </a>
 
-    {% if page.paper_meta.citations %}
-    <a href="{{ page.paper_meta.scholar }}" target="_blank" class="meta-btn btn-citations">
-      <span class="btn-icon">⭐</span> Citations: {{ page.paper_meta.citations }}
-    </a>
-    {% endif %}
+    {% endfor %}
 
   </div>
 </div>
