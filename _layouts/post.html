@@ -181,6 +181,13 @@ layout: base
         </div>
         {% endif %}
         <!-- ================== Optimized Language Switcher End ================== -->
+
+        <!-- === 新增：自动插入论文按钮 === -->
+        {% if page.paper_meta %}
+          {% include paper-buttons.html %}
+        {% endif %}
+        <!-- =========================== -->
+        
         {{ content }}
       </div>
 
