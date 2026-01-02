@@ -1,13 +1,32 @@
 # Deep Residual Shrinkage Network
-*Explore the concepts and applications of DRSN.*
+<div align="center">
+  <em>Explore the concepts and applications of DRSN.</em>
+</div>
 
 ---
 
-[![中文](https://img.shields.io/badge/🇨🇳_中文-red?style=flat-square)](https://zhao62.github.io/zh/2025/12/23/DRSN/)
-[![English](https://img.shields.io/badge/🇺🇸_English-blue?style=flat-square)](https://zhao62.github.io/en/2025/12/23/DRSN/)
-[![Español](https://img.shields.io/badge/🇪🇸_Español-yellow?style=flat-square)](https://zhao62.github.io/es/2025/12/23/DRSN/)
-[![Français](https://img.shields.io/badge/🇫🇷_Français-blueviolet?style=flat-square)](https://zhao62.github.io/fr/2025/12/23/DRSN/)
-[![Korean](https://img.shields.io/badge/🇰🇷_한국어-lightgrey?style=flat-square)](https://zhao62.github.io/ko/2025/12/23/DRSN/)
-[![Japanese](https://img.shields.io/badge/🇯🇵_日本語-white?style=flat-square)](https://zhao62.github.io/ja/2025/12/23/DRSN/)
+<div align="center">
+
+<!-- Pure Text Badges (Flat-Square) -->
+<a href="https://zhao62.github.io/zh/2025/12/23/DRSN/">
+  <img src="https://img.shields.io/badge/-中文-A43530?style=flat-square" alt="中文">
+</a>
+<a href="https://zhao62.github.io/en/2025/12/23/DRSN/">
+  <img src="https://img.shields.io/badge/-English-00529B?style=flat-square" alt="English">
+</a>
+<a href="https://zhao62.github.io/es/2025/12/23/DRSN/">
+  <img src="https://img.shields.io/badge/-Español-E3A218?style=flat-square" alt="Español">
+</a>
+<a href="https://zhao62.github.io/fr/2025/12/23/DRSN/">
+  <img src="https://img.shields.io/badge/-Français-5E60CE?style=flat-square" alt="Français">
+</a>
+<a href="https://zhao62.github.io/ko/2025/12/23/DRSN/">
+  <img src="https://img.shields.io/badge/-한국어-3D5A80?style=flat-square" alt="한국어">
+</a>
+<a href="https://zhao62.github.io/ja/2025/12/23/DRSN/">
+  <img src="https://img.shields.io/badge/-日本語-4A4A4A?style=flat-square" alt="日本語">
+</a>
+
+</div>
 
 ---
