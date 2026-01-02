@@ -11,8 +11,8 @@
 <!-- A-Z Sorted List without breaks for better responsiveness -->
 
 <a href="https://zhao62.github.io/ar/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-Arabic-007A3D?style=flat-square" alt="Arabic"></a>
-<a href="https://zhao62.github.io/zh/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-Chinese%20(Simp)-A43530?style=flat-square" alt="Simplified Chinese"></a>
-<a href="https://zhao62.github.io/zh-TW/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-Chinese%20(Trad)-B22222?style=flat-square" alt="Traditional Chinese"></a>
+<a href="https://zhao62.github.io/zh/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-简体中文-A43530?style=flat-square" alt="Simplified Chinese"></a>
+<a href="https://zhao62.github.io/zh-TW/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-繁體中文-B22222?style=flat-square" alt="Traditional Chinese"></a>
 <a href="https://zhao62.github.io/cs/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-Čeština-11457E?style=flat-square" alt="Czech"></a>
 <a href="https://zhao62.github.io/nl/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-Dutch-AE1C28?style=flat-square" alt="Dutch"></a>
 <a href="https://zhao62.github.io/en/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-English-00529B?style=flat-square" alt="English"></a>
