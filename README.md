@@ -16,7 +16,7 @@
   <a href="https://zhao62.github.io/ko/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-한국어-3D5A80?style=flat-square"></a>
   <a href="https://zhao62.github.io/vi/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-Tiếng_Việt-DA251D?style=flat-square"></a>
   <a href="https://zhao62.github.io/th/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-Thai-2D2A4A?style=flat-square"></a>
-  <a href="https://zhao62.github.io/id/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-Indonesian-DC143C?style=flat-square"></a>
+  <a href="https://zhao62.github.io/id/2025/12/23/DRSN/"><img src="https://img.shields.io/badge/-Bahasa_Indonesia-DC143C?style=flat-square"></a>
 </p>
 
 <!-- 2. Western & Northern Europe -->
